@@ -15,6 +15,7 @@
 		29D72B3E2AA7B46100A43295 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B3D2AA7B46100A43295 /* OnboardingViewController.swift */; };
 		29D72B412AAA4A3C00A43295 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B402AAA4A3C00A43295 /* OnboardingCollectionViewCell.swift */; };
 		29D72B432AAA551E00A43295 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B422AAA551E00A43295 /* LoginViewController.swift */; };
+		29D72B452AAA6C8000A43295 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B442AAA6C8000A43295 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		29D72B3D2AA7B46100A43295 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		29D72B402AAA4A3C00A43295 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		29D72B422AAA551E00A43295 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		29D72B442AAA6C8000A43295 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				29D72B3D2AA7B46100A43295 /* OnboardingViewController.swift */,
 				29D72B422AAA551E00A43295 /* LoginViewController.swift */,
+				29D72B442AAA6C8000A43295 /* SignUpViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D72B452AAA6C8000A43295 /* SignUpViewController.swift in Sources */,
 				29D72B1F2AA7A21600A43295 /* AppDelegate.swift in Sources */,
 				29D72B212AA7A21600A43295 /* SceneDelegate.swift in Sources */,
 				29D72B3E2AA7B46100A43295 /* OnboardingViewController.swift in Sources */,
