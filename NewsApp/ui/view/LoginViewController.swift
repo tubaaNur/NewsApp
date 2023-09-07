@@ -8,9 +8,11 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    @IBOutlet weak var emailTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
     }
     
