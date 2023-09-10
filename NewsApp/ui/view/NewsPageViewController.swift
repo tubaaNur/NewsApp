@@ -20,13 +20,15 @@ class NewsPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        newsCollectionView.delegate = self
+        newsCollectionView.dataSource = self
         
         setStackViewClickable()
         
         
     }
     
-    func setStackViewClickable() {
+    @objc func setStackViewClickable() {
         // Create a UITapGestureRecognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(stackViewTapped))
         // Add the gesture recognizer to your UIStackView
@@ -47,6 +49,7 @@ class NewsPageViewController: UIViewController {
     extension NewsPageViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
        
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+            print("count = \(sliderImageList.count)")
             return sliderImageList.count
         }
         

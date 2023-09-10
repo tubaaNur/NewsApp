@@ -352,10 +352,10 @@
             </objects>
             <point key="canvasLocation" x="3103" y="-619"/>
         </scene>
-        <!--Item-->
+        <!--News Page View Controller-->
         <scene sceneID="ZRv-HQ-NrQ">
             <objects>
-                <viewController id="VbL-Yz-inl" customClass="NewsPageViewController" sceneMemberID="viewController">
+                <viewController id="VbL-Yz-inl" userLabel="News Page View Controller" customClass="NewsPageViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="djY-o4-4zX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -380,7 +380,7 @@
                                     <constraint firstAttribute="height" constant="285" id="hdy-9z-xRH"/>
                                     <constraint firstAttribute="width" constant="393" id="upK-Pu-l00"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wgK-oV-7eR">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wgK-oV-7eR">
                                     <size key="itemSize" width="383" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -388,14 +388,18 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="38I-55-QVO" customClass="NewsCollectionViewCell" customModule="NewsApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="383" height="128"/>
+                                        <rect key="frame" x="5" y="0.0" width="383" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="22N-NX-3pv">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SliderPictureOne" translatesAutoresizingMaskIntoConstraints="NO" id="aYq-b2-diz" userLabel="cellImage">
-                                                    <rect key="frame" x="16" y="0.0" width="155" height="128"/>
+                                                    <rect key="frame" x="16" y="0.0" width="155" height="110"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="110" id="1Oc-tI-vVS"/>
+                                                        <constraint firstAttribute="width" constant="155" id="aM9-2W-EBb"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tubaaa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3B-xx-YcZ" userLabel="cellTitle">
                                                     <rect key="frame" x="175" y="0.0" width="200" height="20.333333333333332"/>
@@ -418,9 +422,9 @@
                                                 </textView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="aYq-b2-diz" secondAttribute="bottom" id="2Ru-AW-HfJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="aYq-b2-diz" secondAttribute="bottom" constant="18" id="2Ru-AW-HfJ"/>
                                                 <constraint firstAttribute="trailing" secondItem="YBn-A8-oe4" secondAttribute="trailing" constant="8" id="5IL-ie-Zx3"/>
-                                                <constraint firstItem="YBn-A8-oe4" firstAttribute="bottom" secondItem="aYq-b2-diz" secondAttribute="bottom" id="A0A-oe-xGt"/>
+                                                <constraint firstItem="YBn-A8-oe4" firstAttribute="bottom" secondItem="aYq-b2-diz" secondAttribute="bottom" constant="18" id="A0A-oe-xGt"/>
                                                 <constraint firstItem="aYq-b2-diz" firstAttribute="leading" secondItem="22N-NX-3pv" secondAttribute="leading" constant="16" id="AjB-26-16p"/>
                                                 <constraint firstItem="U3B-xx-YcZ" firstAttribute="top" secondItem="22N-NX-3pv" secondAttribute="top" id="Jry-KP-Asr"/>
                                                 <constraint firstAttribute="trailing" secondItem="U3B-xx-YcZ" secondAttribute="trailing" constant="8" id="N5F-Yi-hV5"/>
@@ -489,7 +493,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="tDO-r4-jEv"/>
                     <connections>
-                        <outlet property="newsCollectionView" destination="KRo-L5-RyO" id="R7I-9I-4pU"/>
+                        <outlet property="newsCollectionView" destination="KRo-L5-RyO" id="SSF-eZ-AIw"/>
                         <outlet property="popularNewStack" destination="w8a-PP-UCo" id="spb-Rx-uC1"/>
                         <outlet property="searchBar" destination="N3r-AB-PJL" id="C3h-c1-3tp"/>
                     </connections>
