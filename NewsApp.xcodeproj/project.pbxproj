@@ -19,6 +19,7 @@
 		29D72B472AAA763B00A43295 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B462AAA763B00A43295 /* ForgotPasswordViewController.swift */; };
 		29D72B492AAD8C5D00A43295 /* NewsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B482AAD8C5D00A43295 /* NewsPageViewController.swift */; };
 		29D72B4B2AAD9F5400A43295 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B4A2AAD9F5400A43295 /* NewsCollectionViewCell.swift */; };
+		29D72B4F2AADD04500A43295 /* NewsStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D72B4E2AADD04500A43295 /* NewsStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		29D72B462AAA763B00A43295 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		29D72B482AAD8C5D00A43295 /* NewsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPageViewController.swift; sourceTree = "<group>"; };
 		29D72B4A2AAD9F5400A43295 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		29D72B4E2AADD04500A43295 /* NewsStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = NewsStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				29D72B272AA7A21700A43295 /* Assets.xcassets */,
 				29D72B292AA7A21700A43295 /* LaunchScreen.storyboard */,
 				29D72B2C2AA7A21700A43295 /* Info.plist */,
+				29D72B4E2AADD04500A43295 /* NewsStoryboard.storyboard */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -235,6 +238,7 @@
 			files = (
 				29D72B2B2AA7A21700A43295 /* LaunchScreen.storyboard in Resources */,
 				29D72B282AA7A21700A43295 /* Assets.xcassets in Resources */,
+				29D72B4F2AADD04500A43295 /* NewsStoryboard.storyboard in Resources */,
 				29D72B262AA7A21600A43295 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
