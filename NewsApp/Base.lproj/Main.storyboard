@@ -355,7 +355,7 @@
         <!--Item-->
         <scene sceneID="ZRv-HQ-NrQ">
             <objects>
-                <viewController id="VbL-Yz-inl" customClass="NewsPageViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VbL-Yz-inl" customClass="NewsPageViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="djY-o4-4zX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -387,17 +387,17 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="38I-55-QVO">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="38I-55-QVO" customClass="NewsCollectionViewCell" customModule="NewsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="383" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="22N-NX-3pv">
                                             <rect key="frame" x="0.0" y="0.0" width="383" height="128"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aYq-b2-diz" userLabel="cellImage">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SliderPictureOne" translatesAutoresizingMaskIntoConstraints="NO" id="aYq-b2-diz" userLabel="cellImage">
                                                     <rect key="frame" x="16" y="0.0" width="155" height="128"/>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3B-xx-YcZ" userLabel="cellTitle">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tubaaa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3B-xx-YcZ" userLabel="cellTitle">
                                                     <rect key="frame" x="175" y="0.0" width="200" height="20.333333333333332"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="7gP-Tm-jzW"/>
@@ -431,6 +431,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="383" height="128"/>
+                                        <connections>
+                                            <outlet property="cellDescription" destination="YBn-A8-oe4" id="gMs-v7-vzc"/>
+                                            <outlet property="cellImage" destination="aYq-b2-diz" id="l7f-3l-QY0"/>
+                                            <outlet property="cellTitle" destination="U3B-xx-YcZ" id="6F7-h3-XsP"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -484,6 +489,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="tDO-r4-jEv"/>
                     <connections>
+                        <outlet property="newsCollectionView" destination="KRo-L5-RyO" id="R7I-9I-4pU"/>
                         <outlet property="popularNewStack" destination="w8a-PP-UCo" id="spb-Rx-uC1"/>
                         <outlet property="searchBar" destination="N3r-AB-PJL" id="C3h-c1-3tp"/>
                     </connections>

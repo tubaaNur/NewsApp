@@ -18,6 +18,7 @@
 		29D72B452AAA6C8000A43295 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B442AAA6C8000A43295 /* SignUpViewController.swift */; };
 		29D72B472AAA763B00A43295 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B462AAA763B00A43295 /* ForgotPasswordViewController.swift */; };
 		29D72B492AAD8C5D00A43295 /* NewsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B482AAD8C5D00A43295 /* NewsPageViewController.swift */; };
+		29D72B4B2AAD9F5400A43295 /* NewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B4A2AAD9F5400A43295 /* NewsCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		29D72B442AAA6C8000A43295 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		29D72B462AAA763B00A43295 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
 		29D72B482AAD8C5D00A43295 /* NewsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPageViewController.swift; sourceTree = "<group>"; };
+		29D72B4A2AAD9F5400A43295 /* NewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				29D72B402AAA4A3C00A43295 /* OnboardingCollectionViewCell.swift */,
+				29D72B4A2AAD9F5400A43295 /* NewsCollectionViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				29D72B3E2AA7B46100A43295 /* OnboardingViewController.swift in Sources */,
 				29D72B432AAA551E00A43295 /* LoginViewController.swift in Sources */,
 				29D72B472AAA763B00A43295 /* ForgotPasswordViewController.swift in Sources */,
+				29D72B4B2AAD9F5400A43295 /* NewsCollectionViewCell.swift in Sources */,
 				29D72B412AAA4A3C00A43295 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
