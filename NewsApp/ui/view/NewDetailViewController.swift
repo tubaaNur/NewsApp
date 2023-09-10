@@ -18,7 +18,8 @@ class NewDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.tabBarController?.tabBar.isHidden = true
+        
+//        self.tabBarController?.tabBar.isHidden = true
         
         if let n = new{
             detailTitle.text = n.title
@@ -27,4 +28,10 @@ class NewDetailViewController: UIViewController {
          
         }
     }
+//
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        tabBarController?.tabBar.isHidden = false
+//
+//    }
 }
