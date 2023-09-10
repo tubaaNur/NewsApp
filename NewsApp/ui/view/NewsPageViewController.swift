@@ -14,14 +14,15 @@ class NewsPageViewController: UIViewController {
     
     @IBOutlet weak var newsCollectionView: UICollectionView!
     
-    var sliderImageList = ["SliderPictureOne","slider2","slider3","slider4","slider5","slider6"]
-    var sliderTitleList = ["title1","slider2","slider3","slider4","slider5","slider6"]
-    var sliderDescriptionList = ["description1","slider2","slider3","slider4","slider5","slider6"]
+    var newsList = [New(id: 1,title: "tuba",image: "SliderPictureOne",description: "a"),New(id: 2,title: "başar",image: "SliderPictureTwo",description: "a"),New(id: 3,title: "tubababb",image: "SliderPictureThree",description: "bb")]
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
+    
         
         setStackViewClickable()
         
@@ -49,16 +50,16 @@ class NewsPageViewController: UIViewController {
     extension NewsPageViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
        
         func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-            print("count = \(sliderImageList.count)")
-            return sliderImageList.count
+           
+            return newsList.count
         }
         
         func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? NewsCollectionViewCell {
-                    cell.cellImage.image = UIImage(named: sliderImageList[indexPath.row])
+                cell.cellImage.image = UIImage(named: newsList[indexPath.row].image ?? "a")
                     cell.cellImage.layer.cornerRadius = 10
-                cell.cellTitle.text = sliderTitleList[indexPath.row]
-                cell.cellDescription.text = sliderDescriptionList[indexPath.row]
+                cell.cellTitle.text = newsList[indexPath.row].title
+                cell.cellDescription.text = newsList[indexPath.row].description
                     return cell
                 }
             return UICollectionViewCell()
@@ -66,6 +67,22 @@ class NewsPageViewController: UIViewController {
         
         func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
             return CGSize(width: newsCollectionView.frame.width, height: newsCollectionView.frame.height)
+        }
+        
+        func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            let news = newsList[indexPath.row]
+            performSegue(withIdentifier: "toNew", sender: news)
+
+        }
+        
+        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "toNew" {
+                if let new = sender as? New{
+                    
+                    let goToVc = segue.destination as! NewDetailViewController
+                    goToVc.new = new
+                }
+            }
         }
     }
 

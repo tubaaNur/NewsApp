@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2911650F2AADE7C4009F749E /* NewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911650E2AADE7C4009F749E /* NewDetailViewController.swift */; };
+		291165112AADE88C009F749E /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291165102AADE88C009F749E /* New.swift */; };
 		29D72B1F2AA7A21600A43295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B1E2AA7A21600A43295 /* AppDelegate.swift */; };
 		29D72B212AA7A21600A43295 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B202AA7A21600A43295 /* SceneDelegate.swift */; };
 		29D72B262AA7A21600A43295 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29D72B242AA7A21600A43295 /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2911650E2AADE7C4009F749E /* NewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailViewController.swift; sourceTree = "<group>"; };
+		291165102AADE88C009F749E /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
 		29D72B1B2AA7A21600A43295 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29D72B1E2AA7A21600A43295 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29D72B202AA7A21600A43295 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,10 +81,10 @@
 				29D72B1E2AA7A21600A43295 /* AppDelegate.swift */,
 				29D72B202AA7A21600A43295 /* SceneDelegate.swift */,
 				29D72B242AA7A21600A43295 /* Main.storyboard */,
+				29D72B4E2AADD04500A43295 /* NewsStoryboard.storyboard */,
 				29D72B272AA7A21700A43295 /* Assets.xcassets */,
 				29D72B292AA7A21700A43295 /* LaunchScreen.storyboard */,
 				29D72B2C2AA7A21700A43295 /* Info.plist */,
-				29D72B4E2AADD04500A43295 /* NewsStoryboard.storyboard */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -129,6 +133,7 @@
 		29D72B382AA7B0F600A43295 /* entity */ = {
 			isa = PBXGroup;
 			children = (
+				291165102AADE88C009F749E /* New.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -165,6 +170,7 @@
 				29D72B442AAA6C8000A43295 /* SignUpViewController.swift */,
 				29D72B462AAA763B00A43295 /* ForgotPasswordViewController.swift */,
 				29D72B482AAD8C5D00A43295 /* NewsPageViewController.swift */,
+				2911650E2AADE7C4009F749E /* NewDetailViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -255,9 +261,11 @@
 				29D72B1F2AA7A21600A43295 /* AppDelegate.swift in Sources */,
 				29D72B212AA7A21600A43295 /* SceneDelegate.swift in Sources */,
 				29D72B3E2AA7B46100A43295 /* OnboardingViewController.swift in Sources */,
+				291165112AADE88C009F749E /* New.swift in Sources */,
 				29D72B432AAA551E00A43295 /* LoginViewController.swift in Sources */,
 				29D72B472AAA763B00A43295 /* ForgotPasswordViewController.swift in Sources */,
 				29D72B4B2AAD9F5400A43295 /* NewsCollectionViewCell.swift in Sources */,
+				2911650F2AADE7C4009F749E /* NewDetailViewController.swift in Sources */,
 				29D72B412AAA4A3C00A43295 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
