@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2901A9982AAE014B002F1DD9 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2901A9972AAE014B002F1DD9 /* FavouritesViewController.swift */; };
 		2911650F2AADE7C4009F749E /* NewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911650E2AADE7C4009F749E /* NewDetailViewController.swift */; };
 		291165112AADE88C009F749E /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291165102AADE88C009F749E /* New.swift */; };
 		29D72B1F2AA7A21600A43295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B1E2AA7A21600A43295 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2901A9972AAE014B002F1DD9 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		2911650E2AADE7C4009F749E /* NewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailViewController.swift; sourceTree = "<group>"; };
 		291165102AADE88C009F749E /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
 		29D72B1B2AA7A21600A43295 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +173,7 @@
 				29D72B462AAA763B00A43295 /* ForgotPasswordViewController.swift */,
 				29D72B482AAD8C5D00A43295 /* NewsPageViewController.swift */,
 				2911650E2AADE7C4009F749E /* NewDetailViewController.swift */,
+				2901A9972AAE014B002F1DD9 /* FavouritesViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2901A9982AAE014B002F1DD9 /* FavouritesViewController.swift in Sources */,
 				29D72B492AAD8C5D00A43295 /* NewsPageViewController.swift in Sources */,
 				29D72B452AAA6C8000A43295 /* SignUpViewController.swift in Sources */,
 				29D72B1F2AA7A21600A43295 /* AppDelegate.swift in Sources */,
