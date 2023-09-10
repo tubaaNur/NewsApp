@@ -17,6 +17,7 @@
 		29D72B432AAA551E00A43295 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B422AAA551E00A43295 /* LoginViewController.swift */; };
 		29D72B452AAA6C8000A43295 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B442AAA6C8000A43295 /* SignUpViewController.swift */; };
 		29D72B472AAA763B00A43295 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B462AAA763B00A43295 /* ForgotPasswordViewController.swift */; };
+		29D72B492AAD8C5D00A43295 /* NewsPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B482AAD8C5D00A43295 /* NewsPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		29D72B422AAA551E00A43295 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		29D72B442AAA6C8000A43295 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		29D72B462AAA763B00A43295 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		29D72B482AAD8C5D00A43295 /* NewsPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +159,7 @@
 				29D72B422AAA551E00A43295 /* LoginViewController.swift */,
 				29D72B442AAA6C8000A43295 /* SignUpViewController.swift */,
 				29D72B462AAA763B00A43295 /* ForgotPasswordViewController.swift */,
+				29D72B482AAD8C5D00A43295 /* NewsPageViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -240,6 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29D72B492AAD8C5D00A43295 /* NewsPageViewController.swift in Sources */,
 				29D72B452AAA6C8000A43295 /* SignUpViewController.swift in Sources */,
 				29D72B1F2AA7A21600A43295 /* AppDelegate.swift in Sources */,
 				29D72B212AA7A21600A43295 /* SceneDelegate.swift in Sources */,
