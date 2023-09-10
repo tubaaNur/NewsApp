@@ -43,4 +43,18 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: favouritesCollectionView.frame.width, height: favouritesCollectionView.frame.height)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let news = newsList[indexPath.row]
+        performSegue(withIdentifier: "toDetail", sender: news)
+    }
+        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            if let new = sender as? New{
+                let goToVc = segue.destination as! NewDetailViewController
+                goToVc.new = new
+            }
+        }
+    }
 }

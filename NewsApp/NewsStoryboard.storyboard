@@ -327,9 +327,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favourites" image="star.fill" catalog="system" id="zU8-Ed-qTC"/>
-                    <navigationItem key="navigationItem" id="PwE-M0-K6h"/>
+                    <navigationItem key="navigationItem" title="Favourites" id="PwE-M0-K6h"/>
                     <connections>
                         <outlet property="favouritesCollectionView" destination="TEs-Yr-c1a" id="bm5-u3-Xe1"/>
+                        <segue destination="axf-uv-6Pb" kind="show" identifier="toDetail" id="xVv-t1-0CN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iyh-hR-L19" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -550,6 +551,9 @@
             <point key="canvasLocation" x="6050" y="-946"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="xVv-t1-0CN"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="LoginPageImage" width="810" height="866"/>
         <image name="SliderPictureOne" width="1382" height="1350"/>
