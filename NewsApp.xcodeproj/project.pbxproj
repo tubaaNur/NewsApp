@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2901A9982AAE014B002F1DD9 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2901A9972AAE014B002F1DD9 /* FavouritesViewController.swift */; };
+		2901A99A2AAE369B002F1DD9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2901A9992AAE369B002F1DD9 /* ProfileViewController.swift */; };
 		2911650F2AADE7C4009F749E /* NewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911650E2AADE7C4009F749E /* NewDetailViewController.swift */; };
 		291165112AADE88C009F749E /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291165102AADE88C009F749E /* New.swift */; };
 		29D72B1F2AA7A21600A43295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B1E2AA7A21600A43295 /* AppDelegate.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		2901A9972AAE014B002F1DD9 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		2901A9992AAE369B002F1DD9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2911650E2AADE7C4009F749E /* NewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailViewController.swift; sourceTree = "<group>"; };
 		291165102AADE88C009F749E /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
 		29D72B1B2AA7A21600A43295 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +176,7 @@
 				29D72B482AAD8C5D00A43295 /* NewsPageViewController.swift */,
 				2911650E2AADE7C4009F749E /* NewDetailViewController.swift */,
 				2901A9972AAE014B002F1DD9 /* FavouritesViewController.swift */,
+				2901A9992AAE369B002F1DD9 /* ProfileViewController.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				29D72B432AAA551E00A43295 /* LoginViewController.swift in Sources */,
 				29D72B472AAA763B00A43295 /* ForgotPasswordViewController.swift in Sources */,
 				29D72B4B2AAD9F5400A43295 /* NewsCollectionViewCell.swift in Sources */,
+				2901A99A2AAE369B002F1DD9 /* ProfileViewController.swift in Sources */,
 				2911650F2AADE7C4009F749E /* NewDetailViewController.swift in Sources */,
 				29D72B412AAA4A3C00A43295 /* OnboardingCollectionViewCell.swift in Sources */,
 			);
