@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -15,11 +16,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         var storyboardName = "Main"
-//        if someCondition {
-//            storyboardName = "Onboarding"
-//        }else{
-//            storyboardName = "Main"
-//        }
+        if Auth.auth().currentUser != nil {
+            storyboardName = "NewsStoryboard"
+        }
+        else {
+            storyboardName = "Main"
+        }
 
         let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
 
