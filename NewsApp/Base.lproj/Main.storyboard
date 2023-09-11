@@ -128,7 +128,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Login"/>
                                 <connections>
                                     <action selector="loginButtonClick:" destination="lTr-wV-7Vy" eventType="touchUpInside" id="TLJ-gq-W5v"/>
-                                    <segue destination="ypQ-ag-45p" kind="presentation" id="c82-OB-oCm"/>
+                                    <segue destination="ypQ-ag-45p" kind="presentation" identifier="toNewStoryboard" id="c82-OB-oCm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKZ-bN-dLS">
@@ -221,6 +221,7 @@
                     <navigationItem key="navigationItem" id="YFf-LR-Li2"/>
                     <connections>
                         <outlet property="emailTextField" destination="Ibl-wN-NtQ" id="4LJ-KE-Zh3"/>
+                        <outlet property="passwordTextField" destination="fNU-Bk-rVh" id="ZFC-Jx-a07"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f81-Zy-VjD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -319,6 +320,9 @@
                                 <rect key="frame" x="16" y="781.66666666666663" width="361" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign Up"/>
+                                <connections>
+                                    <action selector="signUpButton:" destination="vAT-6T-fGv" eventType="touchUpInside" id="1ar-sa-bpl"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bFt-gQ-5W6">
                                 <rect key="frame" x="16" y="438.33333333333331" width="361" height="48"/>
@@ -348,6 +352,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ixh-at-6OT"/>
+                    <connections>
+                        <outlet property="eMail" destination="bFt-gQ-5W6" id="KhE-FM-HeE"/>
+                        <outlet property="password" destination="UjV-Do-IRz" id="KZ2-L1-Zft"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0Z-XD-ypj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
