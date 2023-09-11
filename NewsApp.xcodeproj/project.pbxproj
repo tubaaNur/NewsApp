@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2901A9982AAE014B002F1DD9 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2901A9972AAE014B002F1DD9 /* FavouritesViewController.swift */; };
 		2901A99A2AAE369B002F1DD9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2901A9992AAE369B002F1DD9 /* ProfileViewController.swift */; };
+		2901A99C2AAF86F5002F1DD9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2901A99B2AAF86F5002F1DD9 /* GoogleService-Info.plist */; };
 		2911650F2AADE7C4009F749E /* NewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911650E2AADE7C4009F749E /* NewDetailViewController.swift */; };
 		291165112AADE88C009F749E /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291165102AADE88C009F749E /* New.swift */; };
 		29D72B1F2AA7A21600A43295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B1E2AA7A21600A43295 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* Begin PBXFileReference section */
 		2901A9972AAE014B002F1DD9 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		2901A9992AAE369B002F1DD9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		2901A99B2AAF86F5002F1DD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2911650E2AADE7C4009F749E /* NewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailViewController.swift; sourceTree = "<group>"; };
 		291165102AADE88C009F749E /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
 		29D72B1B2AA7A21600A43295 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,7 @@
 				29D72B272AA7A21700A43295 /* Assets.xcassets */,
 				29D72B292AA7A21700A43295 /* LaunchScreen.storyboard */,
 				29D72B2C2AA7A21700A43295 /* Info.plist */,
+				2901A99B2AAF86F5002F1DD9 /* GoogleService-Info.plist */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 			files = (
 				29D72B2B2AA7A21700A43295 /* LaunchScreen.storyboard in Resources */,
 				29D72B282AA7A21700A43295 /* Assets.xcassets in Resources */,
+				2901A99C2AAF86F5002F1DD9 /* GoogleService-Info.plist in Resources */,
 				29D72B4F2AADD04500A43295 /* NewsStoryboard.storyboard in Resources */,
 				29D72B262AA7A21600A43295 /* Main.storyboard in Resources */,
 			);
