@@ -18,26 +18,30 @@ class LoginViewController: UIViewController{
     }
     
     @IBAction func loginButtonClick(_ sender: Any) {
+        do {
+            try Auth.auth().signIn(withEmail: emailTextField.text ?? "", password: passwordTextField.text ?? "") { (result, error) in
+                if let error = error{
+                    print("Sign in failed: \(error.localizedDescription)")
+                    
+                } else {
+                    print("User signed in successfully")
+                    
+                    var storyboardName = "NewsStoryboard"
+                    
+                    let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+                    
+                    let intialVC = storyboard.instantiateInitialViewController()
+                    
+                    if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+                        sceneDelegate.window?.rootViewController = intialVC
+                    }
+                    self.performSegue(withIdentifier: "toNewStoryboard", sender: nil)
+                }
+            }
+        }
+            catch { print("User already logged out") }
+        }
+      
         
-        Auth.auth().signIn(withEmail: emailTextField.text ?? "", password: passwordTextField.text ?? "") { (result, error) in
-                  if let error = error{
-                      print("Sign in failed: \(error.localizedDescription)")
-                     
-                  } else {
-                      print("User signed in successfully")
-                      
-                      var storyboardName = "NewsStoryboard"
-
-                      let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
-
-                      let intialVC = storyboard.instantiateInitialViewController()
-                      
-                      if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
-                          sceneDelegate.window?.rootViewController = intialVC
-                      }
-                      self.performSegue(withIdentifier: "toNewStoryboard", sender: nil)
-                  }
-              }
     }
-    
-}
+
