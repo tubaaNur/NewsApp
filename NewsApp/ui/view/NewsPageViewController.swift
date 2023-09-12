@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class NewsPageViewController: UIViewController {
     
@@ -16,20 +17,24 @@ class NewsPageViewController: UIViewController {
     
     var newsList = [New(id: 1,title: "tuba",image: "SliderPictureOne",description: "a"),New(id: 2,title: "başar",image: "SliderPictureTwo",description: "a"),New(id: 3,title: "tubababb",image: "SliderPictureThree",description: "bb")]
     
-
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         self.tabBarController?.tabBar.isHidden = false
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
-    
         
+        var response: NewsResponse? = nil
+        
+        Task {
+            response = await getNews()
+            print(response?.articles?[0].title)
+        }
         setStackViewClickable()
-        
-        
     }
     
+    // Populer haberi tıklanabilir yapmak için varlar
     @objc func setStackViewClickable() {
         // Create a UITapGestureRecognizer
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(stackViewTapped))
@@ -44,7 +49,20 @@ class NewsPageViewController: UIViewController {
         //          let nextViewController = NextViewController()
         //          navigationController?.pushViewController(nextViewController, animated: true)
     }
+    
+    func  getNews() async -> NewsResponse? {
+        //f56bbdad8be940a88c037582ed7c5ff8
+        let response = await   AF.request("https://newsapi.org/v2/top-headlines?country=tr&apiKey=f56bbdad8be940a88c037582ed7c5ff8", method:.get)
+            .validate()
+        // Automatic Decodable support with background parsing.
+        .serializingDecodable(NewsResponse.self)
+        // Await the full response with metrics and a parsed body.
+        .response
+        
+        return response.value
+    }
 }
+
     
 extension NewsPageViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
        
@@ -72,7 +90,7 @@ extension NewsPageViewController: UICollectionViewDelegate, UICollectionViewData
         let news = newsList[indexPath.row]
         performSegue(withIdentifier: "toNew", sender: news)
     }
-        
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toNew" {
             if let new = sender as? New{
@@ -82,4 +100,5 @@ extension NewsPageViewController: UICollectionViewDelegate, UICollectionViewData
         }
     }
 }
+
 

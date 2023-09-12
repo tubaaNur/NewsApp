@@ -11,6 +11,8 @@
 		2901A99A2AAE369B002F1DD9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2901A9992AAE369B002F1DD9 /* ProfileViewController.swift */; };
 		2901A99C2AAF86F5002F1DD9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2901A99B2AAF86F5002F1DD9 /* GoogleService-Info.plist */; };
 		2901A99F2AAF8A27002F1DD9 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 2901A99E2AAF8A27002F1DD9 /* FirebaseAuth */; };
+		2901A9A22AB0CED1002F1DD9 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2901A9A12AB0CED1002F1DD9 /* Alamofire */; };
+		2901A9A42AB0D0CF002F1DD9 /* NewsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2901A9A32AB0D0CF002F1DD9 /* NewsResponse.swift */; };
 		2911650F2AADE7C4009F749E /* NewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911650E2AADE7C4009F749E /* NewDetailViewController.swift */; };
 		291165112AADE88C009F749E /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291165102AADE88C009F749E /* New.swift */; };
 		29D72B1F2AA7A21600A43295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B1E2AA7A21600A43295 /* AppDelegate.swift */; };
@@ -32,6 +34,7 @@
 		2901A9972AAE014B002F1DD9 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
 		2901A9992AAE369B002F1DD9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		2901A99B2AAF86F5002F1DD9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2901A9A32AB0D0CF002F1DD9 /* NewsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsResponse.swift; sourceTree = "<group>"; };
 		2911650E2AADE7C4009F749E /* NewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailViewController.swift; sourceTree = "<group>"; };
 		291165102AADE88C009F749E /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
 		29D72B1B2AA7A21600A43295 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,6 +61,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2901A99F2AAF8A27002F1DD9 /* FirebaseAuth in Frameworks */,
+				2901A9A22AB0CED1002F1DD9 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				291165102AADE88C009F749E /* New.swift */,
+				2901A9A32AB0D0CF002F1DD9 /* NewsResponse.swift */,
 			);
 			path = entity;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			name = NewsApp;
 			packageProductDependencies = (
 				2901A99E2AAF8A27002F1DD9 /* FirebaseAuth */,
+				2901A9A12AB0CED1002F1DD9 /* Alamofire */,
 			);
 			productName = NewsApp;
 			productReference = 29D72B1B2AA7A21600A43295 /* NewsApp.app */;
@@ -244,6 +250,7 @@
 			mainGroup = 29D72B122AA7A21600A43295;
 			packageReferences = (
 				2901A99D2AAF8A27002F1DD9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				2901A9A02AB0CED0002F1DD9 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 29D72B1C2AA7A21600A43295 /* Products */;
 			projectDirPath = "";
@@ -281,6 +288,7 @@
 				29D72B212AA7A21600A43295 /* SceneDelegate.swift in Sources */,
 				29D72B3E2AA7B46100A43295 /* OnboardingViewController.swift in Sources */,
 				291165112AADE88C009F749E /* New.swift in Sources */,
+				2901A9A42AB0D0CF002F1DD9 /* NewsResponse.swift in Sources */,
 				29D72B432AAA551E00A43295 /* LoginViewController.swift in Sources */,
 				29D72B472AAA763B00A43295 /* ForgotPasswordViewController.swift in Sources */,
 				29D72B4B2AAD9F5400A43295 /* NewsCollectionViewCell.swift in Sources */,
@@ -512,6 +520,14 @@
 				minimumVersion = 10.0.0;
 			};
 		};
+		2901A9A02AB0CED0002F1DD9 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -519,6 +535,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2901A99D2AAF8A27002F1DD9 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		2901A9A12AB0CED1002F1DD9 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2901A9A02AB0CED0002F1DD9 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
