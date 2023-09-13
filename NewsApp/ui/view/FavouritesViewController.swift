@@ -50,11 +50,11 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toDetail" {
-            if let new = sender as? New{
-                let goToVc = segue.destination as! NewDetailViewController
-                goToVc.new = new
-            }
-        }
+//        if segue.identifier == "toDetail" {
+//            if let new = sender as? New{
+//                let goToVc = segue.destination as! NewDetailViewController
+//                goToVc.new = new
+//            }
+//        }
     }
 }

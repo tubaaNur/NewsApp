@@ -14,17 +14,17 @@ class NewDetailViewController: UIViewController {
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var detailTitle: UILabel!
     
-    var new: New?
+    var news: News?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
 //        self.tabBarController?.tabBar.isHidden = true
         
-        if let n = new{
+        if let n = news{
             detailTitle.text = n.title
-            detailImage.image = UIImage(named: n.image!)
-            detailDescription.text = n.description
+            detailImage.image = UIImage(named: n.urlToImage ?? "SliderPictureOne")
+            detailDescription.text = n.description ?? "description nil"
          
         }
     }

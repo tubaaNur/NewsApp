@@ -122,9 +122,9 @@ extension NewsPageViewController: UICollectionViewDelegate, UICollectionViewData
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toNew" {
-            if let new = sender as? New{
+            if let news = sender as? News{
                 let goToVc = segue.destination as! NewDetailViewController
-                goToVc.new = new
+                goToVc.news = news
             }
         }
     }
