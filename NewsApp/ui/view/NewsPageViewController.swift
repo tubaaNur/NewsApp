@@ -10,6 +10,12 @@ import Alamofire
 
 class NewsPageViewController: UIViewController,UISearchBarDelegate {
     
+    @IBOutlet weak var loadingView: UIView!{
+        didSet {
+          loadingView.layer.cornerRadius = 6
+        }
+      }
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var popularNewStack: UIStackView!
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -27,9 +33,12 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
         searchBar.delegate = self
         
         var response: NewsResponse? = nil
-        
+        activityIndicator.startAnimating()
+        loadingView.isHidden = false
         Task {
             response = await getNews()
+            activityIndicator.stopAnimating()
+            loadingView.isHidden = true
             newsList = response?.articles
             self.newsCollectionView.reloadData()
         }
