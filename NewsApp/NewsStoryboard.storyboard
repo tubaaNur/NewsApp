@@ -207,6 +207,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vpD-RQ-XTd">
+                                <rect key="frame" x="146.66666666666666" y="376" width="100" height="100"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="29i-ZH-rlE">
+                                        <rect key="frame" x="40" y="40" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="29i-ZH-rlE" firstAttribute="centerX" secondItem="vpD-RQ-XTd" secondAttribute="centerX" id="GGh-39-acn"/>
+                                    <constraint firstAttribute="width" constant="100" id="VHk-v0-Bu9"/>
+                                    <constraint firstAttribute="height" constant="100" id="YcS-0M-Zbm"/>
+                                    <constraint firstItem="29i-ZH-rlE" firstAttribute="centerY" secondItem="vpD-RQ-XTd" secondAttribute="centerY" id="qnW-j3-JDk"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="PBS-SC-vO8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -218,9 +233,11 @@
                             <constraint firstItem="gTg-VR-XkM" firstAttribute="leading" secondItem="LoY-U2-SC8" secondAttribute="leading" id="QZk-0s-9db"/>
                             <constraint firstItem="gTg-VR-XkM" firstAttribute="trailing" secondItem="LoY-U2-SC8" secondAttribute="trailing" id="TWz-Df-ZT8"/>
                             <constraint firstItem="PBS-SC-vO8" firstAttribute="bottom" secondItem="gTg-VR-XkM" secondAttribute="bottom" constant="44" id="dya-UR-nu1"/>
+                            <constraint firstItem="vpD-RQ-XTd" firstAttribute="centerX" secondItem="e4R-la-DO2" secondAttribute="centerX" id="fvN-ex-V4D"/>
                             <constraint firstItem="gTg-VR-XkM" firstAttribute="top" secondItem="KzS-IB-eFh" secondAttribute="bottom" constant="8" symbolic="YES" id="iW7-b5-yjW"/>
                             <constraint firstItem="KzS-IB-eFh" firstAttribute="top" secondItem="LoY-U2-SC8" secondAttribute="bottom" constant="8" id="kfL-gU-yHQ"/>
                             <constraint firstItem="PBS-SC-vO8" firstAttribute="trailing" secondItem="KzS-IB-eFh" secondAttribute="trailing" constant="16" id="l4u-1Y-wis"/>
+                            <constraint firstItem="vpD-RQ-XTd" firstAttribute="centerY" secondItem="e4R-la-DO2" secondAttribute="centerY" id="lFt-Td-vRd"/>
                             <constraint firstItem="LoY-U2-SC8" firstAttribute="top" secondItem="PBS-SC-vO8" secondAttribute="top" id="rDW-e1-Pyf"/>
                             <constraint firstItem="KzS-IB-eFh" firstAttribute="leading" secondItem="PBS-SC-vO8" secondAttribute="leading" constant="16" id="zaq-5n-djc"/>
                         </constraints>
@@ -231,9 +248,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="29i-ZH-rlE" id="9eS-eH-kNO"/>
                         <outlet property="detailDescription" destination="gTg-VR-XkM" id="3AZ-4d-PDN"/>
                         <outlet property="detailImage" destination="LoY-U2-SC8" id="RZs-07-v72"/>
                         <outlet property="detailTitle" destination="KzS-IB-eFh" id="qXF-ih-Hvc"/>
+                        <outlet property="loadingView" destination="vpD-RQ-XTd" id="sVK-tE-33t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGG-0w-AX0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -278,7 +297,28 @@
                                 <view key="backgroundView" contentMode="scaleToFill" id="mgJ-Kw-Hy5">
                                     <rect key="frame" x="0.0" y="0.0" width="393" height="666"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bm2-He-ETo">
+                                            <rect key="frame" x="146.66666666666666" y="283" width="100" height="100"/>
+                                            <subviews>
+                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="e9U-KS-5cH">
+                                                    <rect key="frame" x="40" y="40" width="20" height="20"/>
+                                                </activityIndicatorView>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="e9U-KS-5cH" firstAttribute="centerY" secondItem="bm2-He-ETo" secondAttribute="centerY" id="AJP-aG-hGO"/>
+                                                <constraint firstItem="e9U-KS-5cH" firstAttribute="centerX" secondItem="bm2-He-ETo" secondAttribute="centerX" id="BtD-UI-GwN"/>
+                                                <constraint firstAttribute="height" constant="100" id="SEI-f0-Daw"/>
+                                                <constraint firstAttribute="width" constant="100" id="o6D-SR-piH"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="bm2-He-ETo" firstAttribute="centerY" secondItem="mgJ-Kw-Hy5" secondAttribute="centerY" id="Dbl-y9-nj3"/>
+                                        <constraint firstItem="bm2-He-ETo" firstAttribute="centerX" secondItem="mgJ-Kw-Hy5" secondAttribute="centerX" id="FV5-zq-N8j"/>
+                                    </constraints>
                                 </view>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="m9k-U8-e8v" customClass="NewsCollectionViewCell" customModule="NewsApp" customModuleProvider="target">
@@ -344,7 +384,9 @@
                     <tabBarItem key="tabBarItem" title="Favourites" image="star.fill" catalog="system" id="zU8-Ed-qTC"/>
                     <navigationItem key="navigationItem" title="Favourites" id="PwE-M0-K6h"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="e9U-KS-5cH" id="4M9-kw-gbg"/>
                         <outlet property="favouritesCollectionView" destination="TEs-Yr-c1a" id="bm5-u3-Xe1"/>
+                        <outlet property="loadingView" destination="bm2-He-ETo" id="YuX-N5-hC5"/>
                         <segue destination="axf-uv-6Pb" kind="show" identifier="toDetail" id="xVv-t1-0CN"/>
                     </connections>
                 </viewController>

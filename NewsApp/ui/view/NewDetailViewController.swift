@@ -14,10 +14,23 @@ class NewDetailViewController: UIViewController {
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var detailTitle: UILabel!
     
+    @IBOutlet weak var loadingView: UIView!{
+        didSet {
+          loadingView.layer.cornerRadius = 6
+        }
+      }
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var news: News?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicator.startAnimating()
+        loadingView.isHidden = false
+        
+        activityIndicator.stopAnimating()
+        loadingView.isHidden = true
+
         
 //        self.tabBarController?.tabBar.isHidden = true
         

@@ -11,6 +11,12 @@ class FavouritesViewController: UIViewController {
 
     @IBOutlet weak var favouritesCollectionView: UICollectionView!
     
+    @IBOutlet weak var loadingView: UIView!{
+        didSet {
+          loadingView.layer.cornerRadius = 6
+        }
+      }
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     var newsList = [New(id: 1,title: "tuba",image: "SliderPictureOne",description: "a"),New(id: 2,title: "başar",image: "SliderPictureTwo",description: "a"),New(id: 3,title: "tubababb",image: "SliderPictureThree",description: "bb")]
     
     override func viewDidLoad() {
@@ -18,6 +24,12 @@ class FavouritesViewController: UIViewController {
 
         favouritesCollectionView.delegate = self
         favouritesCollectionView.dataSource = self
+        
+        activityIndicator.startAnimating()
+        loadingView.isHidden = false
+        
+        activityIndicator.stopAnimating()
+        loadingView.isHidden = true
 
     }
 }
