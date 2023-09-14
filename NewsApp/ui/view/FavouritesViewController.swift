@@ -17,7 +17,7 @@ class FavouritesViewController: UIViewController {
         }
       }
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    var newsList = [New(id: 1,title: "tuba",image: "SliderPictureOne",description: "a"),New(id: 2,title: "başar",image: "SliderPictureTwo",description: "a"),New(id: 3,title: "tubababb",image: "SliderPictureThree",description: "bb")]
+    var newsList = [New]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +43,10 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? NewsCollectionViewCell {
-            cell.cellImage.image = UIImage(named: newsList[indexPath.row].image ?? "a")
-            cell.cellImage.layer.cornerRadius = 10
-            cell.cellTitle.text = newsList[indexPath.row].title
-            cell.cellDescription.text = newsList[indexPath.row].description
+//            cell.cellImage.image = UIImage(named: newsList[indexPath.row].image ?? "a")
+//            cell.cellImage.layer.cornerRadius = 10
+//            cell.cellTitle.text = newsList[indexPath.row].title
+//            cell.cellDescription.text = newsList[indexPath.row].description
             return cell
         }
         return UICollectionViewCell()

@@ -7,14 +7,19 @@
 
 import UIKit
 import Alamofire
+import RxSwift
 
 class NewsPageViewController: UIViewController,UISearchBarDelegate {
+    
+    var krepo = NewsRepository()
+    var newsList2 = BehaviorSubject<[New]>(value: [New]())
     
     @IBOutlet weak var loadingView: UIView!{
         didSet {
           loadingView.layer.cornerRadius = 6
         }
       }
+    
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var popularNewStack: UIStackView!
     @IBOutlet weak var searchBar: UISearchBar!
@@ -26,6 +31,9 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        krepo.getFavourites()
+        print("")
         self.tabBarController?.tabBar.isHidden = false
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
