@@ -33,7 +33,7 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
         super.viewDidLoad()
         
         krepo.getFavourites()
-        print("")
+        print("-----------------------------")
         self.tabBarController?.tabBar.isHidden = false
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
@@ -103,6 +103,25 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
         
         return response.value
     }
+//    
+//    func copyDB(){
+//        let bundlePath = Bundle.main.path(forResource: "news", ofType: ".sqlite")
+//        let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+//        let dbUrl = URL(fileURLWithPath: filePath).appendingPathComponent("news.sqlite")
+//        let fm = FileManager.default
+//        
+//        if fm.fileExists(atPath: dbUrl.path()){
+//            print("Veritabanı zaten var")
+//        }
+//        else{
+//            do {
+//                try fm.copyItem(atPath: bundlePath!, toPath: dbUrl.path)
+//            }
+//            catch{
+//                print(error.localizedDescription)
+//            }
+//        }
+//    }
 }
 
     

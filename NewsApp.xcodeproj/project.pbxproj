@@ -20,6 +20,7 @@
 		2901A9B72AB3834C002F1DD9 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2901A9B62AB3834B002F1DD9 /* FMResultSet.m */; };
 		2901A9B92AB3847E002F1DD9 /* NewsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2901A9B82AB3847E002F1DD9 /* NewsRepository.swift */; };
 		2901A9BC2AB387CA002F1DD9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 2901A9BB2AB387CA002F1DD9 /* RxSwift */; };
+		2901A9C42AB431E3002F1DD9 /* news.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2901A9C32AB431E3002F1DD9 /* news.sqlite */; };
 		2911650F2AADE7C4009F749E /* NewDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2911650E2AADE7C4009F749E /* NewDetailViewController.swift */; };
 		291165112AADE88C009F749E /* New.swift in Sources */ = {isa = PBXBuildFile; fileRef = 291165102AADE88C009F749E /* New.swift */; };
 		29D72B1F2AA7A21600A43295 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29D72B1E2AA7A21600A43295 /* AppDelegate.swift */; };
@@ -55,6 +56,8 @@
 		2901A9B52AB38343002F1DD9 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
 		2901A9B62AB3834B002F1DD9 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		2901A9B82AB3847E002F1DD9 /* NewsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsRepository.swift; sourceTree = "<group>"; };
+		2901A9C02AB42B48002F1DD9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2901A9C32AB431E3002F1DD9 /* news.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = news.sqlite; sourceTree = "<group>"; };
 		2911650E2AADE7C4009F749E /* NewDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewDetailViewController.swift; sourceTree = "<group>"; };
 		291165102AADE88C009F749E /* New.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = New.swift; sourceTree = "<group>"; };
 		29D72B1B2AA7A21600A43295 /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,12 +92,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2901A9BF2AB42B48002F1DD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2901A9C02AB42B48002F1DD9 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		29D72B122AA7A21600A43295 = {
 			isa = PBXGroup;
 			children = (
 				29D72B322AA7A35800A43295 /* README.md */,
 				29D72B1D2AA7A21600A43295 /* NewsApp */,
 				29D72B1C2AA7A21600A43295 /* Products */,
+				2901A9BF2AB42B48002F1DD9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,20 +129,21 @@
 				29D72B4E2AADD04500A43295 /* NewsStoryboard.storyboard */,
 				29D72B272AA7A21700A43295 /* Assets.xcassets */,
 				29D72B292AA7A21700A43295 /* LaunchScreen.storyboard */,
-				2901A9A72AB38300002F1DD9 /* FMDatabase.h */,
-				2901A9AA2AB38315002F1DD9 /* FMDatabase.m */,
-				2901A9A92AB38315002F1DD9 /* FMDatabaseAdditions.h */,
-				2901A9AB2AB38315002F1DD9 /* FMDatabaseAdditions.m */,
-				2901A9AF2AB38326002F1DD9 /* FMDatabasePool.h */,
-				2901A9B02AB38326002F1DD9 /* FMDatabasePool.m */,
-				2901A9AE2AB38325002F1DD9 /* FMDatabaseQueue.h */,
-				2901A9B22AB38330002F1DD9 /* FMDatabaseQueue.m */,
-				2901A9B32AB38330002F1DD9 /* FMDB.h */,
-				2901A9B52AB38343002F1DD9 /* FMResultSet.h */,
-				2901A9B62AB3834B002F1DD9 /* FMResultSet.m */,
 				29D72B2C2AA7A21700A43295 /* Info.plist */,
-				2901A99B2AAF86F5002F1DD9 /* GoogleService-Info.plist */,
+				2901A9C32AB431E3002F1DD9 /* news.sqlite */,
+				2901A9B32AB38330002F1DD9 /* FMDB.h */,
+				2901A9B62AB3834B002F1DD9 /* FMResultSet.m */,
+				2901A9B52AB38343002F1DD9 /* FMResultSet.h */,
+				2901A9B22AB38330002F1DD9 /* FMDatabaseQueue.m */,
+				2901A9AE2AB38325002F1DD9 /* FMDatabaseQueue.h */,
+				2901A9B02AB38326002F1DD9 /* FMDatabasePool.m */,
+				2901A9AF2AB38326002F1DD9 /* FMDatabasePool.h */,
+				2901A9AB2AB38315002F1DD9 /* FMDatabaseAdditions.m */,
+				2901A9A92AB38315002F1DD9 /* FMDatabaseAdditions.h */,
+				2901A9AA2AB38315002F1DD9 /* FMDatabase.m */,
+				2901A9A72AB38300002F1DD9 /* FMDatabase.h */,
 				2901A9A82AB38314002F1DD9 /* NewsApp-Bridging-Header.h */,
+				2901A99B2AAF86F5002F1DD9 /* GoogleService-Info.plist */,
 			);
 			path = NewsApp;
 			sourceTree = "<group>";
@@ -305,6 +318,7 @@
 			files = (
 				29D72B2B2AA7A21700A43295 /* LaunchScreen.storyboard in Resources */,
 				29D72B282AA7A21700A43295 /* Assets.xcassets in Resources */,
+				2901A9C42AB431E3002F1DD9 /* news.sqlite in Resources */,
 				2901A99C2AAF86F5002F1DD9 /* GoogleService-Info.plist in Resources */,
 				29D72B4F2AADD04500A43295 /* NewsStoryboard.storyboard in Resources */,
 				29D72B262AA7A21600A43295 /* Main.storyboard in Resources */,

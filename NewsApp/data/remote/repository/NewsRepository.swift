@@ -16,18 +16,18 @@ class NewsRepository{
     
     init(){
         let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-        let dbUrl = URL(fileURLWithPath: filePath).appendingPathComponent("newsApp.sqlite")
+        let dbUrl = URL(fileURLWithPath: filePath).appendingPathComponent("news.sqlite")
         db = FMDatabase(path: dbUrl.path)
     }
     
     func getFavourites(){
         
-        db?.open()
+‚        db?.open()
         
         var list = [New]()
         
         do{
-            let result = try db!.executeQuery("SELECT * FROM news WHERE isFavourite = 'true'", values: nil)
+            let result = try db!.executeQuery("SELECT * FROM new WHERE isFavourite = 'true'", values: nil)
             
             while result.next(){
                 
