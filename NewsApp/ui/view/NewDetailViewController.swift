@@ -20,7 +20,8 @@ class NewDetailViewController: UIViewController {
         }
       }
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    var news: News?
+    
+    var newsDetail: DetailUIModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,7 @@ class NewDetailViewController: UIViewController {
         
 //        self.tabBarController?.tabBar.isHidden = true
         
-        if let n = news{
+        if let n = newsDetail{
             detailTitle.text = n.title
             detailImage.image = UIImage(named: n.urlToImage ?? "SliderPictureOne")
             detailDescription.text = n.description ?? "description nil"

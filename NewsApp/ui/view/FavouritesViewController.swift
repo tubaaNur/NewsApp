@@ -70,9 +70,10 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
-            if let news = sender as? News{
+            if let newsEntity = sender as? NewEntity{
+                let newsDetail = DetailUIModel(id: newsEntity.id, title: newsEntity.title, urlToImage: newsEntity.urlToImage, description: newsEntity.description, isFavourite: newsEntity.isFavourite, urlToNews: newsEntity.urlToNews )
                 let goToVc = segue.destination as! NewDetailViewController
-                goToVc.news = news
+                goToVc.newsDetail = newsDetail
             }
         }
     }

@@ -22,6 +22,7 @@ struct News: Decodable{
     let url: String?
     let urlToImage: String?
     let content: String?
+    let isFavourite:Bool?
     
     let source : Sources?
 }

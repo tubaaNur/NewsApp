@@ -155,10 +155,12 @@ extension NewsPageViewController: UICollectionViewDelegate, UICollectionViewData
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toNew" {
+            var newsDetail:DetailUIModel? = nil
             if let news = sender as? News{
-                let goToVc = segue.destination as! NewDetailViewController
-                goToVc.news = news
+               newsDetail = DetailUIModel(id: nil, title: news.title, urlToImage: news.urlToImage, description: news.description, isFavourite: news.isFavourite, urlToNews: news.url)
             }
+                let goToVc = segue.destination as! NewDetailViewController
+                goToVc.newsDetail = newsDetail
         }
     }
 }
