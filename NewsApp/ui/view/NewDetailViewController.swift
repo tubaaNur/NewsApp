@@ -25,41 +25,49 @@ class NewDetailViewController: UIViewController {
     
     var newsDetail: DetailUIModel?
     var newsRepository = NewsRepository()
+    var isFavourited:Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        if (newsDetail?.isFavourite == true){
-            favourite.tintColor = .red
-        }
-        
+       
+    
         if let n = newsDetail{
             detailTitle.text = n.title
             if let url = URL(string: n.urlToImage ?? "https://resize.indiatvnews.com/en/resize/newbucket/730_-/2023/06/breaking-news-template-4-1687492027-1688087501.jpg"){
                 let data = try? Data(contentsOf: url)
                 detailImage.image = UIImage(data: data ?? Data())
              }
-            
             detailDescription.text = n.description ?? "description nil"
+            isFavourited = n.isFavourite ?? false
+            setButtonImage()
         }
     }
-    @IBAction func favouriteIconAct(_ sender: Any) {
-        
+    func setButtonImage() {
+        let imageName = isFavourited == true ? "heart.fill" : "heart"
+            let image = UIImage(systemName: imageName)
+            favourite.image = image
+        }
+    
+   @IBAction func favouriteIconAct(_ sender: Any) {
+
         activityIndicator.startAnimating()
         loadingView.isHidden = false
-       
-        
-        if (newsDetail?.isFavourite == true){
+
+        if (isFavourited == true){
             newsRepository.delete(title: newsDetail?.title ?? "bbb")
-            favourite.tintColor = .red
+            isFavourited = false
+            setButtonImage()
         }
         else{
             newsRepository.save(new: newsDetail ?? DetailUIModel())
-            favourite.tintColor = .black
+            isFavourited = true
+            setButtonImage()
         }
         activityIndicator.stopAnimating()
         loadingView.isHidden = true
     }
+
     
 
     //

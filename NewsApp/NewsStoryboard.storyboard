@@ -243,7 +243,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Detail" id="KPK-RV-C6T">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="star" catalog="system" id="nfD-99-MZz">
+                        <barButtonItem key="rightBarButtonItem" image="heart.fill" catalog="system" id="nfD-99-MZz">
                             <color key="tintColor" red="0.98039215690000003" green="0.0" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
                                 <action selector="favouriteIconAct:" destination="axf-uv-6Pb" id="zNV-Ur-dzj"/>
@@ -619,10 +619,10 @@
         <image name="LoginPageImage" width="810" height="866"/>
         <image name="SliderPictureOne" width="1382" height="1350"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
+        <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="newspaper.fill" catalog="system" width="128" height="112"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="star" catalog="system" width="128" height="116"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -48,7 +48,7 @@ class NewsRepository{
     }
  
     func save(new:DetailUIModel) {
-        var entityModel = NewEntity(id: new.id, title: new.title, description: new.description, urlToImage: new.urlToImage, isFavourite: new.isFavourite, urlToNews: new.urlToNews)
+        var entityModel = NewEntity(id: new.id, title: new.title, description: new.description, urlToImage: new.urlToImage, isFavourite: true, urlToNews: new.urlToNews)
         db?.open()
         do{
             try db!.executeUpdate("INSERT INTO new (title, description,urlToImage, isFavourite, urlToNews) VALUES (?,?,?,?,?)", values: [entityModel.title,entityModel.description, entityModel.urlToImage, entityModel.isFavourite, entityModel.urlToNews])
