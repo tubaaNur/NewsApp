@@ -56,7 +56,13 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? NewsCollectionViewCell {
-            cell.cellImage.image = UIImage(named: newsList[indexPath.row].urlToImage ?? "SliderPictureOne")
+            
+            if let url = URL(string:newsList[indexPath.row].urlToImage ?? "https://resize.indiatvnews.com/en/resize/newbucket/730_-/2023/06/breaking-news-template-4-1687492027-1688087501.jpg"){
+                let data = try? Data(contentsOf: url)
+                cell.cellImage.image = UIImage(data: data ?? Data())
+             }
+            
+           
             cell.cellImage.layer.cornerRadius = 10
             cell.cellTitle.text = newsList[indexPath.row].title ?? "tubaaa"
             cell.cellDescription.text = newsList[indexPath.row].description ?? "başarım"
