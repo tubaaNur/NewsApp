@@ -245,6 +245,9 @@
                     <navigationItem key="navigationItem" title="Detail" id="KPK-RV-C6T">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="star" catalog="system" id="nfD-99-MZz">
                             <color key="tintColor" red="0.98039215690000003" green="0.0" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="favouriteIconAct:" destination="axf-uv-6Pb" id="zNV-Ur-dzj"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -252,6 +255,7 @@
                         <outlet property="detailDescription" destination="gTg-VR-XkM" id="3AZ-4d-PDN"/>
                         <outlet property="detailImage" destination="LoY-U2-SC8" id="RZs-07-v72"/>
                         <outlet property="detailTitle" destination="KzS-IB-eFh" id="qXF-ih-Hvc"/>
+                        <outlet property="favourite" destination="nfD-99-MZz" id="1Dl-d6-IcD"/>
                         <outlet property="loadingView" destination="vpD-RQ-XTd" id="sVK-tE-33t"/>
                     </connections>
                 </viewController>

@@ -68,7 +68,7 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
     
     func  getNews() async -> NewsResponse? {
         //f56bbdad8be940a88c037582ed7c5ff8
-        let response = await   AF.request("https://newsapi.org/v2/top-headlines?country=tr&apiKey=f56bbdad8be940a88c037582ed7c5ff8", method:.get)
+        let response = await   AF.request("https://newsapi.org/v2/top-headlines?country=us&apiKey=f56bbdad8be940a88c037582ed7c5ff8", method:.get)
             .validate()
         // Automatic Decodable support with background parsing.
         .serializingDecodable(NewsResponse.self)
@@ -91,7 +91,7 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
     
     func  getSearchNews(query:String) async -> NewsResponse? {
         //f56bbdad8be940a88c037582ed7c5ff8
-        let response = await   AF.request("https://newsapi.org/v2/top-headlines?country=tr&q=\(query)&apiKey=f56bbdad8be940a88c037582ed7c5ff8", method:.get)
+        let response = await   AF.request("https://newsapi.org/v2/top-headlines?country=us&q=\(query)&apiKey=f56bbdad8be940a88c037582ed7c5ff8", method:.get)
             .validate()
         // Automatic Decodable support with background parsing.
         .serializingDecodable(NewsResponse.self)
@@ -131,10 +131,13 @@ extension NewsPageViewController: UICollectionViewDelegate, UICollectionViewData
         
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? NewsCollectionViewCell {
-            
+        
             let news = newsList?[indexPath.row]
-
-            cell.cellImage.image = UIImage(named: news?.urlToImage ?? "SliderPictureOne")
+            
+            if let url = URL(string: news?.urlToImage ?? "https://resize.indiatvnews.com/en/resize/newbucket/730_-/2023/06/breaking-news-template-4-1687492027-1688087501.jpg"){
+               let data = try? Data(contentsOf: url)
+               cell.cellImage.image = UIImage(data: data ?? Data())
+            }
             cell.cellImage.layer.cornerRadius = 10
             cell.cellTitle.text = news?.title ?? "title nil"
             cell.cellDescription.text = news?.description ?? "description nil"

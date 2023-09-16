@@ -23,6 +23,8 @@ class FavouritesViewController: UIViewController {
     var newsRepository = NewsRepository()
     
     override func viewDidLoad() {
+        
+       
         super.viewDidLoad()
         
         favouritesCollectionView.delegate = self
@@ -39,6 +41,10 @@ class FavouritesViewController: UIViewController {
         
         activityIndicator.stopAnimating()
         loadingView.isHidden = true
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.favouritesCollectionView.reloadData()
     }
 }
 

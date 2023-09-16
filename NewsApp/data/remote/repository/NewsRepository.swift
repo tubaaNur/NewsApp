@@ -30,13 +30,13 @@ class NewsRepository{
             
             while result.next(){
                 let id = Int(result.string(forColumn: "id"))!
-                let title = result.string(forColumn: "title")!
-                let urlToImage = result.string(forColumn: "urlToImage")!
-                let description = result.string(forColumn: "description")!
+                let title = result.string(forColumn: "title")
+                let urlToImage = result.string(forColumn: "urlToImage")
+                let description = result.string(forColumn: "description")
                 let isFavourite = result.bool(forColumn: "isFavourite")
-                let urlToNews = result.string(forColumn: "urlToNews")!
+                let urlToNews = result.string(forColumn: "urlToNews")
     
-                let new = NewEntity(id: id, title: title, urlToImage: urlToImage, description: description, isFavourite: isFavourite, urlToNews:urlToNews)
+                let new = NewEntity(id: id, title: title, description: description, urlToImage: urlToImage, isFavourite: isFavourite, urlToNews:urlToNews)
                 list.append(new)
             }
             newsList.onNext(list)
@@ -47,14 +47,28 @@ class NewsRepository{
         db?.close()
     }
  
-    func save(new:NewEntity) {
+    func save(new:DetailUIModel) {
+        var entityModel = NewEntity(id: new.id, title: new.title, description: new.description, urlToImage: new.urlToImage, isFavourite: new.isFavourite, urlToNews: new.urlToNews)
         db?.open()
         do{
-            try db!.executeUpdate("INSERT INTO new (title, urlToImage, description, isFavourite, urlToNews) VALUES (?,?,?,?,?)", values: [new.title, new.urlToImage, new.description, new.isFavourite, new.urlToNews])
+            try db!.executeUpdate("INSERT INTO new (title, description,urlToImage, isFavourite, urlToNews) VALUES (?,?,?,?,?)", values: [entityModel.title,entityModel.description, entityModel.urlToImage, entityModel.isFavourite, entityModel.urlToNews])
         }
         catch{
             print(error.localizedDescription)
         }
         db?.close()
     }
+    
+    func delete(title: String){
+        
+        db?.open()
+        do{
+            try db!.executeUpdate("DELETE FROM new WHERE title = ?", values: [title])
+        }
+        catch{
+            print(error.localizedDescription)
+        }
+        db?.close()
+    }
+    
 }
