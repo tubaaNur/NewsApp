@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 class FavouritesViewController: UIViewController {
 
@@ -17,36 +18,42 @@ class FavouritesViewController: UIViewController {
         }
       }
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    var newsList = [New]()
+    
+    var newsList = [NewEntity]()
+    var newsRepository = NewsRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         favouritesCollectionView.delegate = self
         favouritesCollectionView.dataSource = self
         
         activityIndicator.startAnimating()
         loadingView.isHidden = false
         
+        newsRepository.getFavourites()
+        newsRepository.newsList.subscribe(onNext: { list in
+            self.newsList = list
+            self.favouritesCollectionView.reloadData()
+        })
+        
         activityIndicator.stopAnimating()
         loadingView.isHidden = true
-
     }
 }
 
 extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
         return newsList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as? NewsCollectionViewCell {
-//            cell.cellImage.image = UIImage(named: newsList[indexPath.row].image ?? "a")
-//            cell.cellImage.layer.cornerRadius = 10
-//            cell.cellTitle.text = newsList[indexPath.row].title
-//            cell.cellDescription.text = newsList[indexPath.row].description
+            cell.cellImage.image = UIImage(named: newsList[indexPath.row].urlToImage ?? "SliderPictureOne")
+            cell.cellImage.layer.cornerRadius = 10
+            cell.cellTitle.text = newsList[indexPath.row].title ?? "tubaaa"
+            cell.cellDescription.text = newsList[indexPath.row].description ?? "başarım"
             return cell
         }
         return UICollectionViewCell()
@@ -62,11 +69,11 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
     }
         
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "toDetail" {
-//            if let new = sender as? New{
-//                let goToVc = segue.destination as! NewDetailViewController
-//                goToVc.new = new
-//            }
-//        }
+        if segue.identifier == "toDetail" {
+            if let news = sender as? News{
+                let goToVc = segue.destination as! NewDetailViewController
+                goToVc.news = news
+            }
+        }
     }
 }

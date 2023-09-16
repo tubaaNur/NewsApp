@@ -11,8 +11,6 @@ import RxSwift
 
 class NewsPageViewController: UIViewController,UISearchBarDelegate {
     
-    var krepo = NewsRepository()
-    var newsList2 = BehaviorSubject<[New]>(value: [New]())
     
     @IBOutlet weak var loadingView: UIView!{
         didSet {
@@ -32,8 +30,7 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
         
         super.viewDidLoad()
         
-        krepo.getFavourites()
-        print("-----------------------------")
+       
         self.tabBarController?.tabBar.isHidden = false
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
