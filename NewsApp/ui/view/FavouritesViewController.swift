@@ -30,6 +30,10 @@ class FavouritesViewController: UIViewController {
         favouritesCollectionView.delegate = self
         favouritesCollectionView.dataSource = self
         
+       
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         activityIndicator.startAnimating()
         loadingView.isHidden = false
         
@@ -41,10 +45,8 @@ class FavouritesViewController: UIViewController {
         
         activityIndicator.stopAnimating()
         loadingView.isHidden = true
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.favouritesCollectionView.reloadData()
+        
+       
     }
 }
 
@@ -62,7 +64,6 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
                 cell.cellImage.image = UIImage(data: data ?? Data())
              }
             
-           
             cell.cellImage.layer.cornerRadius = 10
             cell.cellTitle.text = newsList[indexPath.row].title ?? "tubaaa"
             cell.cellDescription.text = newsList[indexPath.row].description ?? "başarım"

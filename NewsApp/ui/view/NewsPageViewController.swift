@@ -22,8 +22,12 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
     @IBOutlet weak var popularNewStack: UIStackView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    @IBOutlet weak var popularHeader: UILabel!
     @IBOutlet weak var newsCollectionView: UICollectionView!
     
+    @IBOutlet weak var popularNewImage: UIImageView!
+    @IBOutlet weak var popularNewTitle: UILabel!
+    @IBOutlet weak var popularNewDescription: UITextView!
     var newsList:[News]? = nil
 
     override func viewDidLoad() {
@@ -45,6 +49,14 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
             activityIndicator.stopAnimating()
             loadingView.isHidden = true
             newsList = response?.articles
+            popularHeader.text = "Popular News"
+            let randomItem = newsList?.randomElement()
+           if let url = URL(string: randomItem?.urlToImage ?? "https://resize.indiatvnews.com/en/resize/newbucket/730_-/2023/06/breaking-news-template-4-1687492027-1688087501.jpg"){
+                let data = try? Data(contentsOf: url)
+               popularNewImage.image  = UIImage(data: data ?? Data())
+             }
+            popularNewTitle.text = randomItem?.title
+            popularNewDescription.text = randomItem?.description
             self.newsCollectionView.reloadData()
         }
         setStackViewClickable()

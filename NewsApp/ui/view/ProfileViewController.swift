@@ -13,16 +13,26 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileViewLanguage: UIView!
     @IBOutlet weak var profileview: UIView!
     
+    @IBOutlet weak var userEmail: UILabel!
+    @IBOutlet weak var profileImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        profileview.layer.borderWidth = 0.4
-        profileview.layer.borderColor = UIColor.lightGray.cgColor
-        profileview.layer.cornerRadius = 15
-        
-        profileViewLanguage.layer.borderWidth = 0.4
-        profileViewLanguage.layer.borderColor = UIColor.lightGray.cgColor
-        profileViewLanguage.layer.cornerRadius = 15
+        if let user = Auth.auth().currentUser {
+         
+            let email = user.email
+
+            let defaultProfileImage = UIImage(named: "SliderPictureOne")
+            profileImage?.image = defaultProfileImage
+            userEmail.text = email
+            profileview.layer.borderWidth = 0.4
+            profileview.layer.borderColor = UIColor.lightGray.cgColor
+            profileview.layer.cornerRadius = 15
+            
+            profileViewLanguage.layer.borderWidth = 0.4
+            profileViewLanguage.layer.borderColor = UIColor.lightGray.cgColor
+            profileViewLanguage.layer.cornerRadius = 15
+        }
     }
     
     @IBAction func logOutAction(_ sender: Any) {
