@@ -456,6 +456,9 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="47" id="T2b-zl-xlG"/>
                                         </constraints>
+                                        <connections>
+                                            <action selector="darkModeSwitch:" destination="0z7-bI-QNi" eventType="valueChanged" id="8Mu-6n-mRK"/>
+                                        </connections>
                                     </switch>
                                 </subviews>
                                 <constraints>
@@ -540,15 +543,17 @@
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="6pi-C0-2Gb"/>
                     <navigationItem key="navigationItem" title="My Profile" id="1qV-WI-8hf"/>
                     <connections>
+                        <outlet property="darkModeSwitch" destination="L5y-GC-2Ea" id="Xq6-VH-WHO"/>
                         <outlet property="profileImage" destination="iUH-bw-to7" id="SeQ-4C-kmR"/>
                         <outlet property="profileViewLanguage" destination="wkp-Dk-JpD" id="eit-Mh-kc4"/>
                         <outlet property="profileview" destination="PVt-Eq-MkY" id="Z6n-mX-AVS"/>
+                        <outlet property="rootView" destination="yO2-jv-Pgh" id="hcK-8N-SIC"/>
                         <outlet property="userEmail" destination="sKA-jR-EMi" id="2JO-qn-kF3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z7e-ar-cvN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7603.8167938931292" y="585.91549295774655"/>
+            <point key="canvasLocation" x="7604" y="586"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="439-ov-cWI">
