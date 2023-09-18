@@ -33,12 +33,12 @@ class NewDetailViewController: UIViewController {
        
     
         if let n = newsDetail{
-            detailTitle.text = n.title
+            detailTitle?.text = n.title
             if let url = URL(string: n.urlToImage ?? "https://resize.indiatvnews.com/en/resize/newbucket/730_-/2023/06/breaking-news-template-4-1687492027-1688087501.jpg"){
                 let data = try? Data(contentsOf: url)
-                detailImage.image = UIImage(data: data ?? Data())
+                detailImage?.image = UIImage(data: data ?? Data())
              }
-            detailDescription.text = n.description ?? "description nil"
+            detailDescription?.text = n.description ?? "description nil"
             isFavourited = n.isFavourite ?? false
             setButtonImage()
         }
@@ -46,7 +46,7 @@ class NewDetailViewController: UIViewController {
     func setButtonImage() {
         let imageName = isFavourited == true ? "heart.fill" : "heart"
             let image = UIImage(systemName: imageName)
-            favourite.image = image
+            favourite?.image = image
         }
     
    @IBAction func favouriteIconAct(_ sender: Any) {

@@ -179,7 +179,7 @@
                         <outlet property="popularNewImage" destination="Yql-1K-efC" id="crH-e2-fLp"/>
                         <outlet property="popularNewStack" destination="w8a-PP-UCo" id="spb-Rx-uC1"/>
                         <outlet property="popularNewTitle" destination="jqU-bn-4Aq" id="a9q-ml-tjr"/>
-                        <outlet property="searchBar" destination="N3r-AB-PJL" id="C3h-c1-3tp"/>
+                        <outlet property="searchBar" destination="N3r-AB-PJL" id="jCA-qA-Mfx"/>
                         <segue destination="axf-uv-6Pb" kind="show" identifier="toNew" id="OkT-UI-XYn"/>
                     </connections>
                 </viewController>
@@ -628,7 +628,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="xVv-t1-0CN"/>
+        <segue reference="OkT-UI-XYn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LoginPageImage" width="810" height="866"/>

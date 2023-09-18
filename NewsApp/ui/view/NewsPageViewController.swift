@@ -28,13 +28,14 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
     @IBOutlet weak var popularNewImage: UIImageView!
     @IBOutlet weak var popularNewTitle: UILabel!
     @IBOutlet weak var popularNewDescription: UITextView!
+    
     var newsList:[News]? = nil
+    var randomItem:News? = nil
 
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-       
         self.tabBarController?.tabBar.isHidden = false
         newsCollectionView.delegate = self
         newsCollectionView.dataSource = self
@@ -50,7 +51,7 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
             loadingView.isHidden = true
             newsList = response?.articles
             popularHeader.text = "Popular News"
-            let randomItem = newsList?.randomElement()
+            randomItem = newsList?.randomElement()
            if let url = URL(string: randomItem?.urlToImage ?? "https://resize.indiatvnews.com/en/resize/newbucket/730_-/2023/06/breaking-news-template-4-1687492027-1688087501.jpg"){
                 let data = try? Data(contentsOf: url)
                popularNewImage.image  = UIImage(data: data ?? Data())
@@ -71,20 +72,14 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
     }
     
     @objc func stackViewTapped() {
-        // Handle the tap action here
-        // You can perform your navigation to another screen here
-        // For example, pushing a new view controller onto the navigation stack
-        //          let nextViewController = NextViewController()
-        //          navigationController?.pushViewController(nextViewController, animated: true)
+        performSegue(withIdentifier: "toNew", sender: randomItem)
     }
     
     func  getNews() async -> NewsResponse? {
         //f56bbdad8be940a88c037582ed7c5ff8
         let response = await   AF.request("https://newsapi.org/v2/top-headlines?country=us&apiKey=f56bbdad8be940a88c037582ed7c5ff8", method:.get)
             .validate()
-        // Automatic Decodable support with background parsing.
         .serializingDecodable(NewsResponse.self)
-        // Await the full response with metrics and a parsed body.
         .response
         
         return response.value
@@ -102,35 +97,13 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
     }
     
     func  getSearchNews(query:String) async -> NewsResponse? {
-        //f56bbdad8be940a88c037582ed7c5ff8
         let response = await   AF.request("https://newsapi.org/v2/top-headlines?country=us&q=\(query)&apiKey=f56bbdad8be940a88c037582ed7c5ff8", method:.get)
             .validate()
-        // Automatic Decodable support with background parsing.
         .serializingDecodable(NewsResponse.self)
-        // Await the full response with metrics and a parsed body.
         .response
         
         return response.value
     }
-//    
-//    func copyDB(){
-//        let bundlePath = Bundle.main.path(forResource: "news", ofType: ".sqlite")
-//        let filePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
-//        let dbUrl = URL(fileURLWithPath: filePath).appendingPathComponent("news.sqlite")
-//        let fm = FileManager.default
-//        
-//        if fm.fileExists(atPath: dbUrl.path()){
-//            print("Veritabanı zaten var")
-//        }
-//        else{
-//            do {
-//                try fm.copyItem(atPath: bundlePath!, toPath: dbUrl.path)
-//            }
-//            catch{
-//                print(error.localizedDescription)
-//            }
-//        }
-//    }
 }
 
     
