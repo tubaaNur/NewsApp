@@ -18,6 +18,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet var rootView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     
+    
+    private var selectedLanguage: String? {
+        didSet {
+            print("selectedLanguage \(selectedLanguage)")
+        }
+    }
+    
     var window: UIWindow?
     weak var themeDelegate: ThemeChangeDelegate?
     
@@ -41,6 +48,8 @@ class ProfileViewController: UIViewController {
             profileViewLanguage.layer.borderColor = UIColor.lightGray.cgColor
             profileViewLanguage.layer.cornerRadius = 15
         }
+        
+//        setLanguageImageClickable()
     }
     @IBAction func darkModeSwitch(_ sender: Any) {
         if darkModeSwitch.isOn {
@@ -55,6 +64,32 @@ class ProfileViewController: UIViewController {
         themeDelegate?.didChangeTheme(theme: theme)
     }
     
+    @IBAction func changeLanguageImageAct(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "NewsStoryboard", bundle: nil)
+        
+        if let vc = storyboard.instantiateViewController(identifier: "PickerViewController") as? PickerViewController {
+            vc.delegate = self
+            vc.modalPresentationStyle = .overCurrentContext
+            self.present(vc, animated: true)
+        }
+    }
+//    @objc func setLanguageImageClickable() {
+//        // Create a UITapGestureRecognizer
+//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(languageImageViewTapped))
+//        // Add the gesture recognizer to your UIStackView
+//        changeLanguage.addGestureRecognizer(tapGesture)
+//    }
+//
+//    @objc func languageImageViewTapped() {
+//        let storyboard = UIStoryboard(name: "NewsStoryboard", bundle: nil)
+//
+//        if let vc = storyboard.instantiateViewController(identifier: "PickerViewController") as? PickerViewController {
+//            vc.delegate = self
+//            vc.modalPresentationStyle = .overCurrentContext
+//            self.present(vc, animated: true)
+//        }
+//    }
+    
     @IBAction func logOutAction(_ sender: Any) {
         do {
             try Auth.auth().signOut()
@@ -68,3 +103,10 @@ class ProfileViewController: UIViewController {
         catch { print("User already logged out") }
     }
 }
+
+extension ProfileViewController: PickerViewControllerDelegate {
+    func didSelectContactType(_ type: String ) {
+        selectedLanguage = type
+    }
+}
+
