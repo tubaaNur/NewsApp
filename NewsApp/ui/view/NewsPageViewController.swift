@@ -11,6 +11,7 @@ import RxSwift
 
 class NewsPageViewController: UIViewController,UISearchBarDelegate {
     
+    let defaultLocalizer = LocalizeUtils.defaultLocalizer
     
     @IBOutlet weak var loadingView: UIView!{
         didSet {
@@ -50,7 +51,8 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
             activityIndicator.stopAnimating()
             loadingView.isHidden = true
             newsList = response?.articles
-            popularHeader.text = "Popular News"
+                 
+            print("popular header \(popularHeader.text)")
             randomItem = newsList?.randomElement()
            if let url = URL(string: randomItem?.urlToImage ?? "https://resize.indiatvnews.com/en/resize/newbucket/730_-/2023/06/breaking-news-template-4-1687492027-1688087501.jpg"){
                 let data = try? Data(contentsOf: url)
@@ -61,6 +63,10 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
             self.newsCollectionView.reloadData()
         }
         setStackViewClickable()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        popularHeader.text = defaultLocalizer.stringForKey(key: "popularNews")
     }
     
     // Populer haberi tıklanabilir yapmak için varlar

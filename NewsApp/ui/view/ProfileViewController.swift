@@ -9,7 +9,7 @@ import UIKit
 import FirebaseAuth
 
 class ProfileViewController: UIViewController {
-
+    
     @IBOutlet weak var profileViewLanguage: UIView!
     @IBOutlet weak var profileview: UIView!
     
@@ -18,13 +18,18 @@ class ProfileViewController: UIViewController {
     @IBOutlet var rootView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     
+    let defaultLocalizer = LocalizeUtils.defaultLocalizer
     
     private var selectedLanguage: String? {
         didSet {
             print("selectedLanguage \(selectedLanguage)")
+            UserDefaults.standard.set(selectedLanguage, forKey: "SelectedLanguage")
+            UserDefaults.standard.synchronize()
+            defaultLocalizer.setSelectedLanguage(lang: selectedLanguage ?? "en")
+            
         }
     }
-    
+
     var window: UIWindow?
     weak var themeDelegate: ThemeChangeDelegate?
     
@@ -73,22 +78,7 @@ class ProfileViewController: UIViewController {
             self.present(vc, animated: true)
         }
     }
-//    @objc func setLanguageImageClickable() {
-//        // Create a UITapGestureRecognizer
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(languageImageViewTapped))
-//        // Add the gesture recognizer to your UIStackView
-//        changeLanguage.addGestureRecognizer(tapGesture)
-//    }
-//
-//    @objc func languageImageViewTapped() {
-//        let storyboard = UIStoryboard(name: "NewsStoryboard", bundle: nil)
-//
-//        if let vc = storyboard.instantiateViewController(identifier: "PickerViewController") as? PickerViewController {
-//            vc.delegate = self
-//            vc.modalPresentationStyle = .overCurrentContext
-//            self.present(vc, animated: true)
-//        }
-//    }
+
     
     @IBAction func logOutAction(_ sender: Any) {
         do {
@@ -110,3 +100,25 @@ extension ProfileViewController: PickerViewControllerDelegate {
     }
 }
 
+
+
+class LocalizeUtils: NSObject {
+
+    static let defaultLocalizer = LocalizeUtils()
+    var appbundle = Bundle.main
+    
+    func setSelectedLanguage(lang: String) {
+        guard let langPath = Bundle.main.path(forResource: lang, ofType: "lproj") else {
+            print("langht: \(lang)")
+            
+            appbundle = Bundle.main
+            return
+        }
+        appbundle = Bundle(path: langPath)!
+        print("langht path: \(langPath)")
+    }
+    
+    func stringForKey(key: String) -> String {
+        return appbundle.localizedString(forKey: key, value: "", table: nil)
+    }
+}

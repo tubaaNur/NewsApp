@@ -1,0 +1,78 @@
+
+/* Class = "UIButton"; configuration.title = "Cancel"; ObjectID = "1ID-h7-wn3"; */
+"1ID-h7-wn3.configuration.title" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1ID-h7-wn3"; */
+"1ID-h7-wn3.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "My Profile"; ObjectID = "1qV-WI-8hf"; */
+"1qV-WI-8hf.title" = "My Profile";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "3FV-jO-o6b"; */
+"3FV-jO-o6b.title" = "Item";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "4Ou-7A-2Yo"; */
+"4Ou-7A-2Yo.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UITabBarItem"; title = "Profile"; ObjectID = "6pi-C0-2Gb"; */
+"6pi-C0-2Gb.title" = "Profile";
+
+/* Class = "UINavigationItem"; title = "Detail"; ObjectID = "KPK-RV-C6T"; */
+"KPK-RV-C6T.title" = "Detail";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "KzS-IB-eFh"; */
+"KzS-IB-eFh.text" = "Label";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Med-7r-LBW"; */
+"Med-7r-LBW.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Favourites"; ObjectID = "PwE-M0-K6h"; */
+"PwE-M0-K6h.title" = "Favoriler";
+
+/* Class = "UILabel"; text = "Change Language"; ObjectID = "Quc-kn-FqK"; */
+"Quc-kn-FqK.text" = "Change Language";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "SE4-qP-M15"; */
+"SE4-qP-M15.text" = "Label";
+
+/* Class = "UILabel"; text = "tubaaa"; ObjectID = "U3B-xx-YcZ"; */
+"U3B-xx-YcZ.text" = "tubaaa";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "YBn-A8-oe4"; */
+"YBn-A8-oe4.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "bHP-69-8p8"; */
+"bHP-69-8p8.title" = "Item";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "baG-lF-x6R"; */
+"baG-lF-x6R.text" = "Label";
+
+/* Class = "UIButton"; configuration.title = "Log Out"; ObjectID = "c2l-39-y0h"; */
+"c2l-39-y0h.configuration.title" = "Log Out";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "c2l-39-y0h"; */
+"c2l-39-y0h.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "eSh-rw-bvt"; */
+"eSh-rw-bvt.title" = "Item";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "gTg-VR-XkM"; */
+"gTg-VR-XkM.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UILabel"; text = "ibo"; ObjectID = "sKA-jR-EMi"; */
+"sKA-jR-EMi.text" = "ibo";
+
+/* Class = "UITabBarItem"; title = "News"; ObjectID = "tDO-r4-jEv"; */
+"tDO-r4-jEv.title" = "News";
+
+/* Class = "UIButton"; configuration.title = "Confirm"; ObjectID = "uEe-gI-Cyd"; */
+"uEe-gI-Cyd.configuration.title" = "Confirm";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uEe-gI-Cyd"; */
+"uEe-gI-Cyd.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Favourites"; ObjectID = "zU8-Ed-qTC"; */
+"zU8-Ed-qTC.title" = "Favourites";
+
+/* Class = "UILabel"; text = "tubaaa"; ObjectID = "zXT-Ob-AXg"; */
+"zXT-Ob-AXg.text" = "tubaaa";

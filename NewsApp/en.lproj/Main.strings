@@ -1,0 +1,66 @@
+
+/* Class = "UIButton"; configuration.title = "Forgat Password?"; ObjectID = "1KY-dk-aWB"; */
+"1KY-dk-aWB.configuration.title" = "Forgat Password?";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1KY-dk-aWB"; */
+"1KY-dk-aWB.normalTitle" = "Button";
+
+/* Class = "UITextView"; text = "DSJKFLKJKDFŞKJSDLKCJNXMFLKCDJMFLKDJMFLKJXFLKDMFLŞDÖFLŞDÖFŞLDFİŞDFFDFMDLFLÇVŞCÖV                               DJHSFLKŞJKŞDKJSFLKJDFJKLKÇJMDFLKXJDLKJXFKVLŞLJKDFKLDJXDLKSFJLKDFJKLFJSKLJFSLŞD."; ObjectID = "5GQ-16-dnd"; */
+"5GQ-16-dnd.text" = "DSJKFLKJKDFŞKJSDLKCJNXMFLKCDJMFLKDJMFLKJXFLKDMFLŞDÖFLŞDÖFŞLDFİŞDFFDFMDLFLÇVŞCÖV                               DJHSFLKŞJKŞDKJSFLKJDFJKLKÇJMDFLKXJDLKJXFKVLŞLJKDFKLDJXDLKSFJLKDFJKLFJSKLJFSLŞD.";
+
+/* Class = "UITextField"; placeholder = "Enter Email "; ObjectID = "DlD-B7-TDI"; */
+"DlD-B7-TDI.placeholder" = "Enter Email ";
+
+/* Class = "UILabel"; text = "WELCOME!"; ObjectID = "H6q-ms-zCK"; */
+"H6q-ms-zCK.text" = "WELCOME!";
+
+/* Class = "UITextField"; placeholder = "Enter Email "; ObjectID = "Ibl-wN-NtQ"; */
+"Ibl-wN-NtQ.placeholder" = "Enter Email ";
+
+/* Class = "UIButton"; configuration.title = "Skip"; ObjectID = "OYc-QX-WF4"; */
+"OYc-QX-WF4.configuration.title" = "Skip";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "OYc-QX-WF4"; */
+"OYc-QX-WF4.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "WELCOME!"; ObjectID = "Phy-Om-Gvi"; */
+"Phy-Om-Gvi.text" = "WELCOME!";
+
+/* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "UjV-Do-IRz"; */
+"UjV-Do-IRz.placeholder" = "Enter Password";
+
+/* Class = "UIButton"; configuration.subtitle = "New to News? Register Now!"; ObjectID = "VKZ-bN-dLS"; */
+"VKZ-bN-dLS.configuration.subtitle" = "New to News? Register Now!";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "VKZ-bN-dLS"; */
+"VKZ-bN-dLS.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "Yw1-qb-XHK"; */
+"Yw1-qb-XHK.configuration.title" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Yw1-qb-XHK"; */
+"Yw1-qb-XHK.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Enter Email "; ObjectID = "bFt-gQ-5W6"; */
+"bFt-gQ-5W6.placeholder" = "Enter Email ";
+
+/* Class = "UIButton"; configuration.title = "Login"; ObjectID = "bUo-d1-Y19"; */
+"bUo-d1-Y19.configuration.title" = "Login";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "bUo-d1-Y19"; */
+"bUo-d1-Y19.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "df8-GO-CP0"; */
+"df8-GO-CP0.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "Enter Password"; ObjectID = "fNU-Bk-rVh"; */
+"fNU-Bk-rVh.placeholder" = "Enter Password";
+
+/* Class = "UILabel"; text = "SIGN UP"; ObjectID = "gDI-8n-UG3"; */
+"gDI-8n-UG3.text" = "SIGN UP";
+
+/* Class = "UIButton"; configuration.title = "Reset Password "; ObjectID = "uxq-CA-Qca"; */
+"uxq-CA-Qca.configuration.title" = "Reset Password ";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "uxq-CA-Qca"; */
+"uxq-CA-Qca.normalTitle" = "Button";
