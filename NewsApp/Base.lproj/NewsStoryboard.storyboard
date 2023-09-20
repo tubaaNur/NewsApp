@@ -739,7 +739,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="LoginPageImage" width="810" height="866"/>
-        <image name="SliderPictureOne" width="1382" height="1350"/>
+        <image name="SliderPictureOne" width="1536" height="1494"/>
         <image name="chevron.right" catalog="system" width="97" height="128"/>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="newspaper.fill" catalog="system" width="128" height="112"/>

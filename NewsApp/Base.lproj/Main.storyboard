@@ -108,7 +108,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginPageImage" translatesAutoresizingMaskIntoConstraints="NO" id="9bq-SZ-yQ0">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginPicture" translatesAutoresizingMaskIntoConstraints="NO" id="9bq-SZ-yQ0">
                                 <rect key="frame" x="32" y="111" width="329" height="258"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="258" id="Kx2-MR-uvL"/>
@@ -227,7 +227,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginPageImage" translatesAutoresizingMaskIntoConstraints="NO" id="b2Y-r2-AlA">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ForgotImage" translatesAutoresizingMaskIntoConstraints="NO" id="b2Y-r2-AlA">
                                 <rect key="frame" x="32" y="119" width="329" height="258"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="258" id="Wjd-Lc-l21"/>
@@ -292,7 +292,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginPageImage" translatesAutoresizingMaskIntoConstraints="NO" id="paf-rs-2zg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RegisterImage" translatesAutoresizingMaskIntoConstraints="NO" id="paf-rs-2zg">
                                 <rect key="frame" x="32" y="111" width="329" height="258"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="258" id="gzs-tg-a7P"/>
@@ -389,7 +389,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="LoginPageImage" width="810" height="866"/>
+        <image name="ForgotImage" width="1194" height="1032"/>
+        <image name="LoginPicture" width="1332" height="1032"/>
+        <image name="RegisterImage" width="966" height="842"/>
         <image name="SliderPictureOne" width="1536" height="1494"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
