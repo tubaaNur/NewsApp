@@ -10,9 +10,14 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
+    
+    @IBOutlet weak var profileTitle: UINavigationItem!
     @IBOutlet weak var profileViewLanguage: UIView!
     @IBOutlet weak var profileview: UIView!
     
+    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var languageLabel: UILabel!
+    @IBOutlet weak var themeLabel: UILabel!
     @IBOutlet weak var darkModeSwitch: UISwitch!
     @IBOutlet weak var userEmail: UILabel!
     @IBOutlet var rootView: UIView!
@@ -56,6 +61,17 @@ class ProfileViewController: UIViewController {
         
 //        setLanguageImageClickable()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        profileTitle.title = defaultLocalizer.stringForKey(key: "profileTitle")
+        themeLabel.text = defaultLocalizer.stringForKey(key:  "themeLabel")
+        languageLabel.text = defaultLocalizer.stringForKey(key:  "languageLabel")
+        let localizedLogout = defaultLocalizer.stringForKey(key:  "logoutButton")
+        logoutButton.setTitle(localizedLogout, for: .normal)
+        
+        
+    }
+    
     @IBAction func darkModeSwitch(_ sender: Any) {
         if darkModeSwitch.isOn {
             changeThemeTo("Light")

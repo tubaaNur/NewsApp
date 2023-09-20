@@ -9,6 +9,8 @@ import UIKit
 
 class NewDetailViewController: UIViewController {
 
+    let defaultLocalizer = LocalizeUtils.defaultLocalizer
+    
     @IBOutlet weak var detailDescription: UITextView!
 
     @IBOutlet weak var detailImage: UIImageView!
@@ -42,6 +44,13 @@ class NewDetailViewController: UIViewController {
             isFavourited = n.isFavourite ?? false
             setButtonImage()
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
+        
+        detailTitle.text = defaultLocalizer.stringForKey(key: "detailTitle")
     }
     func setButtonImage() {
         let imageName = isFavourited == true ? "heart.fill" : "heart"

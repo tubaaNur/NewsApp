@@ -10,6 +10,8 @@ import RxSwift
 
 class FavouritesViewController: UIViewController {
 
+    let defaultLocalizer = LocalizeUtils.defaultLocalizer
+    
     @IBOutlet weak var favouritesCollectionView: UICollectionView!
     
     @IBOutlet weak var loadingView: UIView!{
@@ -17,6 +19,7 @@ class FavouritesViewController: UIViewController {
           loadingView.layer.cornerRadius = 6
         }
       }
+    @IBOutlet weak var favouritesTitle: UINavigationItem!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     var newsList = [NewEntity]()
@@ -46,8 +49,9 @@ class FavouritesViewController: UIViewController {
         activityIndicator.stopAnimating()
         loadingView.isHidden = true
         
-       
+        favouritesTitle.title = defaultLocalizer.stringForKey(key: "favouritesLabel")
     }
+       
 }
 
 extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -90,4 +94,6 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
             }
         }
     }
+    
+
 }

@@ -7,3 +7,30 @@
 */
 
 "popularNews" = "Popüler Haberler";
+"welcomeLabel" = "HOŞGELDİNİZ!";
+"forgatButton" = "Şifremi Unuttum?";
+"loginButton" = "Giriş Yap";
+"registerButton" = "Haberlerde yeni misiniz? Şimdi üye Ol!";
+"emailText" = "Email Giriniz";
+"passwordText" = "Şifre Giriniz";
+"resetPassword" = "Şifreyi Sıfırla";
+"signLabel" = "Kayıt Ol";
+"signButton" = "Kayıt Ol";
+"favouritesLabel" = "Favoriler";
+"profileTitle" = "Profilim";
+"themeLabel" = "Koyu Tema";
+"languageLabel" = "Dili Değiştir";
+"logoutButton" = "Çıkış Yap";
+"detailTitle" = "Detay";
+"cancelButton" = "İptal";
+"confirmButton" = "Onayla";
+"languagePicker" = "Dil Değiştir";
+"sliderTitleOne" = "Her Zaman, Her Yerde Oku";
+"sliderTitleTwo" = "Haber Kaydet";
+"sliderTitleThree" = "Farklı Tema Desteği";
+"sliderTitleFour" = "Kendi Dilinizde Okuyun";
+"skipButton" = "Geç";
+"sliderDescriptionOne" = "En güncel haberler parmaklarınızın altında";
+"sliderDescriptionTwo" = "Haberleri daha sonra okumak üzere kaydedin, böylece istediğiniz zaman haberleri tekrar okuyun.";
+"sliderDescriptionThree" = "Okuyuş deneyiminizi kişiselleştirmek için açık ve karanlık temalar arasında geçiş yapabilirsiniz.";
+"sliderDescriptionFour" = "Uygulamanın dilini değiştirerek tercih ettiğiniz dilde haberleri keşfedin!";

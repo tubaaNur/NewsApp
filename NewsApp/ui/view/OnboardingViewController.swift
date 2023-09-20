@@ -8,10 +8,13 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-
-    var sliderImageList = ["SliderPictureOne","SliderPictureTwo","SliderPictureThree"]
-    var sliderTitleList = ["slider","slider2","slider3","slider4","slider5","slider6"]
-    var sliderDescriptionList = ["slider","slider2","slider3","slider4","slider5","slider6"]
+    
+    let defaultLocalizer = LocalizeUtils.defaultLocalizer
+    
+    var sliderImageList = ["SliderPictureOne","SliderPictureTwo","SliderPictureThree", "SliderPictureFour"]
+    @IBOutlet weak var skipButton: UIButton!
+    var sliderTitleList: [String] = []
+    var sliderDescriptionList : [String] = []
 
     var currentCellIndex = 0
     var timer = Timer()
@@ -23,11 +26,28 @@ class OnboardingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        sliderTitleList = [defaultLocalizer.stringForKey(key: "sliderTitleOne"),
+                           defaultLocalizer.stringForKey(key: "sliderTitleTwo"),
+                           defaultLocalizer.stringForKey(key: "sliderTitleThree"),
+                           defaultLocalizer.stringForKey(key: "sliderTitleFour"),]
+        
+        sliderDescriptionList = [defaultLocalizer.stringForKey(key: "sliderDescriptionOne"),
+                           defaultLocalizer.stringForKey(key: "sliderDescriptionTwo"),
+                           defaultLocalizer.stringForKey(key: "sliderDescriptionThree"),
+                           defaultLocalizer.stringForKey(key: "sliderDescriptionFour"),]
+        
         sliderCollectionView.delegate = self
         sliderCollectionView.dataSource = self
         
         timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(slideToNext),userInfo: nil,repeats: true)
         pageControl.numberOfPages = sliderImageList.count
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let localizedSkip = defaultLocalizer.stringForKey(key:  "skipButton")
+        skipButton.setTitle(localizedSkip, for: .normal)
+        
     }
     
     @objc func slideToNext()

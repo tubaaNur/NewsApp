@@ -9,3 +9,30 @@
 
 
 "popularNews" = "Popular News";
+"welcomeLabel" = "WELCOME!";
+"forgatButton" = "Forgat Password?";
+"loginButton" = "Login";
+"registerButton"  = "New to News? Register Now!";
+"emailText" = "Enter Email";
+"passwordText" = "Enter Password";
+"resetPassword" = "Reset Password";
+"signLabel" = "Sign Up";
+"signButton" = "Sign Up";
+"favouritesLabel" = "Favourites";
+"profileTitle" = "My Profile";
+"themeLabel" = "Dark Theme";
+"languageLabel" = "Change Language";
+"logoutButton" = "LogOut";
+"detailTitle" = "Detail";
+"cancelButton" = "Cancel";
+"confirmButton" = "Confirm";
+"languagePicker" = "Change Language";
+"sliderTitleOne" = "Read Anytime, Anywhere";
+"sliderTitleTwo" = "Bookmark Favorites";
+"sliderTitleThree" = "Customize Your Look";
+"sliderTitleFour" = "Read in Your Language";
+"skipButton" = "Skip";
+"sliderDescriptionOne" = "Get the latest news updates on topics that matter to you, delivered right to your fingertips.";
+"sliderDescriptionTwo" = "Save articles for later, so you can revisit your favorite stories whenever you want";
+"sliderDescriptionThree" = "Switch between light and dark themes to personalize your reading experience.";
+"sliderDescriptionFour" = "Explore news in your preferred language with our language customization feature.";

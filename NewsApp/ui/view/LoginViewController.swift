@@ -9,9 +9,16 @@ import UIKit
 import FirebaseAuth
 
 class LoginViewController: UIViewController{
+    
+    let defaultLocalizer = LocalizeUtils.defaultLocalizer
+    
     @IBOutlet weak var emailTextField: UITextField!
     
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var forgatButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +48,20 @@ class LoginViewController: UIViewController{
         }
             catch { print("User already logged out") }
         }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        welcomeLabel.text = defaultLocalizer.stringForKey(key: "welcomeLabel")
+        
+        let localizedForgat = defaultLocalizer.stringForKey(key: "forgatButton")
+        forgatButton.setTitle(localizedForgat, for: .normal)
+        
+        let localizedLogin = defaultLocalizer.stringForKey(key: "loginButton")
+        loginButton.setTitle(localizedLogin, for: .normal)
+        emailTextField.placeholder = defaultLocalizer.stringForKey(key: "emailText")
+        passwordTextField.placeholder = defaultLocalizer.stringForKey(key: "passwordText")
+        let localizedRegister = defaultLocalizer.stringForKey(key:  "registerButton")
+        registerButton.setTitle(localizedRegister, for: .normal)
+    }
       
         
     }

@@ -18,9 +18,12 @@ extension PickerViewControllerDelegate {
 }
 
 class PickerViewController: UIViewController {
-    
+    let defaultLocalizer = LocalizeUtils.defaultLocalizer
     var list: [String] = ["en", "tr"]
 
+    @IBOutlet weak var languagePicker: UILabel!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var confirmButton: UIButton!
     
     @IBOutlet weak var filterPickerView: UIPickerView!
     
@@ -41,6 +44,15 @@ class PickerViewController: UIViewController {
         filterPickerView.delegate = self
         filterPickerView.dataSource = self
         selectedLanguage = list[0]
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let localizedCancel = defaultLocalizer.stringForKey(key:  "cancelButton")
+        cancelButton.setTitle(localizedCancel, for: .normal)
+        
+        let localizedConfirm = defaultLocalizer.stringForKey(key:  "confirmButton")
+        confirmButton.setTitle(localizedConfirm, for: .normal)
+        languagePicker.text = defaultLocalizer.stringForKey(key:  "languagePicker")
     }
 }
 

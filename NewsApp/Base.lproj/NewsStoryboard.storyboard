@@ -168,7 +168,7 @@
                             <constraint firstItem="KRo-L5-RyO" firstAttribute="bottom" secondItem="aIK-ct-bfb" secondAttribute="bottom" id="zFR-IR-pEv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="News" image="newspaper.fill" catalog="system" id="tDO-r4-jEv"/>
+                    <tabBarItem key="tabBarItem" title="" image="newspaper.fill" catalog="system" id="tDO-r4-jEv"/>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="kDZ-QR-6Wu"/>
                     <connections>
                         <outlet property="activityIndicator" destination="Pjz-up-TmO" id="4zD-Ee-51m"/>
@@ -393,11 +393,12 @@
                         <viewLayoutGuide key="safeArea" id="cPC-M0-bJc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favourites" image="star.fill" catalog="system" id="zU8-Ed-qTC"/>
+                    <tabBarItem key="tabBarItem" title="" image="star.fill" catalog="system" id="zU8-Ed-qTC"/>
                     <navigationItem key="navigationItem" title="Favourites" id="PwE-M0-K6h"/>
                     <connections>
                         <outlet property="activityIndicator" destination="e9U-KS-5cH" id="4M9-kw-gbg"/>
                         <outlet property="favouritesCollectionView" destination="TEs-Yr-c1a" id="bm5-u3-Xe1"/>
+                        <outlet property="favouritesTitle" destination="PwE-M0-K6h" id="Z1Y-wQ-dnJ"/>
                         <outlet property="loadingView" destination="bm2-He-ETo" id="YuX-N5-hC5"/>
                         <segue destination="axf-uv-6Pb" kind="show" identifier="toDetail" id="xVv-t1-0CN"/>
                     </connections>
@@ -406,7 +407,7 @@
             </objects>
             <point key="canvasLocation" x="7603.8167938931292" y="-946.47887323943667"/>
         </scene>
-        <!--My Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="dXU-OX-SxN">
             <objects>
                 <viewController id="0z7-bI-QNi" customClass="ProfileViewController" customModule="NewsApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -442,7 +443,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PVt-Eq-MkY">
                                 <rect key="frame" x="16" y="251" width="361" height="47"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baG-lF-x6R">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baG-lF-x6R">
                                         <rect key="frame" x="8" y="13" width="284" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="284" id="mlO-gC-Zmr"/>
@@ -510,16 +511,15 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2l-39-y0h">
-                                <rect key="frame" x="16" y="406" width="361" height="34"/>
+                                <rect key="frame" x="16" y="405.66666666666669" width="361" height="34.333333333333314"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="361" id="R5U-KE-mCs"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Log Out">
+                                <buttonConfiguration key="configuration" style="plain" title="LOGOUT">
                                     <backgroundConfiguration key="background" cornerRadius="15">
                                         <color key="strokeColor" red="0.81591792919999995" green="0.213554943" blue="0.16465887579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
-                                    <color key="baseForegroundColor" red="0.81591792919999995" green="0.213554943" blue="0.16465887579999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="logOutAction:" destination="0z7-bI-QNi" eventType="touchUpInside" id="6dY-ag-v8A"/>
@@ -549,14 +549,18 @@
                             <constraint firstItem="YA9-0h-3Sq" firstAttribute="trailing" secondItem="sKA-jR-EMi" secondAttribute="trailing" constant="16" id="zGs-eh-YAz"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" id="6pi-C0-2Gb"/>
-                    <navigationItem key="navigationItem" title="My Profile" id="1qV-WI-8hf"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="6pi-C0-2Gb"/>
+                    <navigationItem key="navigationItem" id="1qV-WI-8hf"/>
                     <connections>
                         <outlet property="darkModeSwitch" destination="L5y-GC-2Ea" id="Xq6-VH-WHO"/>
+                        <outlet property="languageLabel" destination="SE4-qP-M15" id="bBY-dc-cRX"/>
+                        <outlet property="logoutButton" destination="c2l-39-y0h" id="LKx-vV-TOS"/>
                         <outlet property="profileImage" destination="iUH-bw-to7" id="SeQ-4C-kmR"/>
+                        <outlet property="profileTitle" destination="1qV-WI-8hf" id="t0s-bc-BSx"/>
                         <outlet property="profileViewLanguage" destination="wkp-Dk-JpD" id="eit-Mh-kc4"/>
                         <outlet property="profileview" destination="PVt-Eq-MkY" id="Z6n-mX-AVS"/>
                         <outlet property="rootView" destination="yO2-jv-Pgh" id="hcK-8N-SIC"/>
+                        <outlet property="themeLabel" destination="baG-lF-x6R" id="mva-en-WTC"/>
                         <outlet property="userEmail" destination="sKA-jR-EMi" id="2JO-qn-kF3"/>
                     </connections>
                 </viewController>
@@ -602,10 +606,10 @@
                                             <action selector="onClickCancelButton:" destination="kkx-ax-a0w" eventType="touchUpInside" id="ueh-S8-rAs"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Quc-kn-FqK">
-                                        <rect key="frame" x="131" y="14" width="152" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Quc-kn-FqK">
+                                        <rect key="frame" x="131" y="14" width="135" height="21"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="152" id="Pxk-TC-C7u"/>
+                                            <constraint firstAttribute="width" constant="135" id="Pxk-TC-C7u"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -622,7 +626,7 @@
                                     <constraint firstItem="Quc-kn-FqK" firstAttribute="top" secondItem="XV0-tX-YSW" secondAttribute="top" constant="14" id="qop-sc-fzD"/>
                                     <constraint firstItem="1ID-h7-wn3" firstAttribute="leading" secondItem="XV0-tX-YSW" secondAttribute="leading" constant="12" id="rnE-BF-dg5"/>
                                     <constraint firstAttribute="bottom" secondItem="1ID-h7-wn3" secondAttribute="bottom" constant="35" id="t82-gm-RAZ"/>
-                                    <constraint firstItem="uEe-gI-Cyd" firstAttribute="leading" secondItem="Quc-kn-FqK" secondAttribute="trailing" constant="12.67" id="tDA-kY-7XX"/>
+                                    <constraint firstItem="uEe-gI-Cyd" firstAttribute="leading" secondItem="Quc-kn-FqK" secondAttribute="trailing" constant="29.666666666666686" id="tDA-kY-7XX"/>
                                     <constraint firstAttribute="bottom" secondItem="Quc-kn-FqK" secondAttribute="bottom" constant="42" id="vBa-zZ-6BN"/>
                                 </constraints>
                             </view>
@@ -648,12 +652,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="nst-9z-Fsa"/>
                     <connections>
+                        <outlet property="cancelButton" destination="1ID-h7-wn3" id="Llr-vr-pUU"/>
+                        <outlet property="confirmButton" destination="uEe-gI-Cyd" id="6G7-fc-M6S"/>
                         <outlet property="filterPickerView" destination="fKD-GY-S1n" id="Weu-iq-6Tw"/>
+                        <outlet property="languagePicker" destination="Quc-kn-FqK" id="GfD-q2-PxM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VuZ-jk-4Bo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8657" y="574"/>
+            <point key="canvasLocation" x="8655.7251908396938" y="573.94366197183103"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="439-ov-cWI">

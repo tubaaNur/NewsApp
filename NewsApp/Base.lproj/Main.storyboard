@@ -45,19 +45,19 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="391" height="350"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-16-dnd" userLabel="Description">
-                                                    <rect key="frame" x="16" y="404" width="359" height="147"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-16-dnd" userLabel="Description">
+                                                    <rect key="frame" x="16" y="435" width="359" height="116"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <string key="text">DSJKFLKJKDFŞKJSDLKCJNXMFLKCDJMFLKDJMFLKJXFLKDMFLŞDÖFLŞDÖFŞLDFİŞDFFDFMDLFLÇVŞCÖV                               DJHSFLKŞJKŞDKJSFLKJDFJKLKÇJMDFLKXJDLKJXFKVLŞLJKDFKLDJXDLKSFJLKDFJKLFJSKLJFSLŞD.</string>
                                                     <color key="textColor" systemColor="labelColor"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                 </textView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df8-GO-CP0" userLabel="Title">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="df8-GO-CP0" userLabel="Title">
                                                     <rect key="frame" x="16" y="366" width="359" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -92,6 +92,7 @@
                     <navigationItem key="navigationItem" id="aW7-J4-aou"/>
                     <connections>
                         <outlet property="pageControl" destination="h5I-aK-98y" id="7Vx-sD-NU7"/>
+                        <outlet property="skipButton" destination="OYc-QX-WF4" id="s9D-M1-HFN"/>
                         <outlet property="sliderCollectionView" destination="doO-yb-S0H" id="0QI-lV-fHt"/>
                     </connections>
                 </viewController>
@@ -120,7 +121,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bUo-d1-Y19">
-                                <rect key="frame" x="16" y="732.33333333333337" width="361" height="36.666666666666629"/>
+                                <rect key="frame" x="16" y="746.33333333333337" width="361" height="36.666666666666629"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36.666666666666629" id="xFB-R1-axp"/>
                                 </constraints>
@@ -131,24 +132,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKZ-bN-dLS">
-                                <rect key="frame" x="16" y="785" width="361" height="28"/>
+                                <rect key="frame" x="16" y="799" width="361" height="14"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
-                                    <attributedString key="attributedSubtitle">
-                                        <fragment content="New to News? ">
-                                            <attributes>
-                                                <font key="NSFont" metaFont="toolTip"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                        <fragment content="Register Now!">
-                                            <attributes>
-                                                <font key="NSFont" metaFont="toolTip"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                <integer key="NSUnderline" value="1"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                    <attributedString key="attributedSubtitle"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="vAT-6T-fGv" kind="show" id="IuQ-Ce-3Ck"/>
@@ -220,7 +207,11 @@
                     <navigationItem key="navigationItem" id="YFf-LR-Li2"/>
                     <connections>
                         <outlet property="emailTextField" destination="Ibl-wN-NtQ" id="4LJ-KE-Zh3"/>
+                        <outlet property="forgatButton" destination="1KY-dk-aWB" id="X3v-PF-js3"/>
+                        <outlet property="loginButton" destination="bUo-d1-Y19" id="ECJ-Is-DZX"/>
                         <outlet property="passwordTextField" destination="fNU-Bk-rVh" id="ZFC-Jx-a07"/>
+                        <outlet property="registerButton" destination="VKZ-bN-dLS" id="6K2-Z0-bHW"/>
+                        <outlet property="welcomeLabel" destination="H6q-ms-zCK" id="KU0-iD-Z4w"/>
                         <segue destination="ypQ-ag-45p" kind="presentation" identifier="toNewStoryboard" id="NVi-GF-5Yq"/>
                     </connections>
                 </viewController>
@@ -285,6 +276,8 @@
                     <navigationItem key="navigationItem" id="1oV-SH-es8"/>
                     <connections>
                         <outlet property="email" destination="DlD-B7-TDI" id="8eF-JZ-Az5"/>
+                        <outlet property="resetPassword" destination="uxq-CA-Qca" id="BvE-iW-rqj"/>
+                        <outlet property="welcomeLabel" destination="Phy-Om-Gvi" id="WrO-a1-7Ip"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="auM-Mo-zpe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -358,6 +351,8 @@
                     <connections>
                         <outlet property="eMail" destination="bFt-gQ-5W6" id="KhE-FM-HeE"/>
                         <outlet property="password" destination="UjV-Do-IRz" id="KZ2-L1-Zft"/>
+                        <outlet property="signButton" destination="Yw1-qb-XHK" id="ZxR-rg-BsV"/>
+                        <outlet property="signLabel" destination="gDI-8n-UG3" id="lkD-Vv-E5L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c0Z-XD-ypj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -395,7 +390,7 @@
     </scenes>
     <resources>
         <image name="LoginPageImage" width="810" height="866"/>
-        <image name="SliderPictureOne" width="1382" height="1350"/>
+        <image name="SliderPictureOne" width="1536" height="1494"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
