@@ -47,7 +47,7 @@ class ProfileViewController: UIViewController {
        
         if let user = Auth.auth().currentUser {
             let email = user.email
-            let defaultProfileImage = UIImage(named: "SliderPictureOne")
+            let defaultProfileImage = UIImage(named: "profilePicture")
             profileImage?.image = defaultProfileImage
             userEmail.text = email
             profileview.layer.borderWidth = 0.4

@@ -389,10 +389,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ForgotImage" width="1194" height="1032"/>
-        <image name="LoginPicture" width="1332" height="1032"/>
-        <image name="RegisterImage" width="966" height="842"/>
-        <image name="SliderPictureOne" width="1536" height="1494"/>
+        <image name="ForgotImage" width="537" height="464"/>
+        <image name="LoginPicture" width="568" height="440"/>
+        <image name="RegisterImage" width="535" height="466"/>
+        <image name="SliderPictureOne" width="506" height="493"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
