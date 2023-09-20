@@ -32,7 +32,7 @@ class NewDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        loadingView.isHidden = true
     
         if let n = newsDetail{
             detailTitle?.text = n.title

@@ -63,11 +63,11 @@ class ProfileViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        profileTitle.title = defaultLocalizer.stringForKey(key: "profileTitle")
-        themeLabel.text = defaultLocalizer.stringForKey(key:  "themeLabel")
-        languageLabel.text = defaultLocalizer.stringForKey(key:  "languageLabel")
+        profileTitle?.title = defaultLocalizer.stringForKey(key: "profileTitle")
+        themeLabel?.text = defaultLocalizer.stringForKey(key:  "themeLabel")
+        languageLabel?.text = defaultLocalizer.stringForKey(key:  "languageLabel")
         let localizedLogout = defaultLocalizer.stringForKey(key:  "logoutButton")
-        logoutButton.setTitle(localizedLogout, for: .normal)
+        logoutButton?.setTitle(localizedLogout, for: .normal)
         
         
     }

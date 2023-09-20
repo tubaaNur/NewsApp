@@ -49,7 +49,7 @@ class FavouritesViewController: UIViewController {
         activityIndicator.stopAnimating()
         loadingView.isHidden = true
         
-        favouritesTitle.title = defaultLocalizer.stringForKey(key: "favouritesLabel")
+        favouritesTitle?.title = defaultLocalizer.stringForKey(key: "favouritesLabel")
     }
        
 }

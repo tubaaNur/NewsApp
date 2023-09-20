@@ -21,6 +21,7 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var popularNewStack: UIStackView!
+    @IBOutlet weak var newsTitle: UINavigationItem!
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var popularHeader: UILabel!
@@ -67,6 +68,9 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         popularHeader.text = defaultLocalizer.stringForKey(key: "popularNews")
+        
+        
+        newsTitle.title = defaultLocalizer.stringForKey(key: "newsTitle")
     }
     
     // Populer haberi tıklanabilir yapmak için varlar
