@@ -8,19 +8,19 @@
 import UIKit
 
 class NewDetailViewController: UIViewController {
-
+    
     let defaultLocalizer = LocalizeUtils.defaultLocalizer
     
     @IBOutlet weak var detailDescription: UITextView!
-
+    
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var detailTitle: UILabel!
     
     @IBOutlet weak var loadingView: UIView!{
         didSet {
-          loadingView.layer.cornerRadius = 6
+            loadingView.layer.cornerRadius = 6
         }
-      }
+    }
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
     @IBOutlet weak var favourite: UIBarButtonItem!
@@ -33,13 +33,13 @@ class NewDetailViewController: UIViewController {
         super.viewDidLoad()
         
         loadingView.isHidden = true
-    
+        
         if let n = newsDetail{
             detailTitle?.text = n.title
             if let url = URL(string: n.urlToImage ?? "https://resize.indiatvnews.com/en/resize/newbucket/730_-/2023/06/breaking-news-template-4-1687492027-1688087501.jpg"){
                 let data = try? Data(contentsOf: url)
                 detailImage?.image = UIImage(data: data ?? Data())
-             }
+            }
             detailDescription?.text = n.description ?? "description nil"
             isFavourited = n.isFavourite ?? false
             setButtonImage()
@@ -50,19 +50,18 @@ class NewDetailViewController: UIViewController {
         
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         
-        detailTitle.text = defaultLocalizer.stringForKey(key: "detailTitle")
     }
     func setButtonImage() {
         let imageName = isFavourited == true ? "heart.fill" : "heart"
-            let image = UIImage(systemName: imageName)
-            favourite?.image = image
-        }
+        let image = UIImage(systemName: imageName)
+        favourite?.image = image
+    }
     
-   @IBAction func favouriteIconAct(_ sender: Any) {
-
+    @IBAction func favouriteIconAct(_ sender: Any) {
+        
         activityIndicator.startAnimating()
         loadingView.isHidden = false
-
+        
         if (isFavourited == true){
             newsRepository.delete(title: newsDetail?.title ?? "bbb")
             isFavourited = false
@@ -76,13 +75,4 @@ class NewDetailViewController: UIViewController {
         activityIndicator.stopAnimating()
         loadingView.isHidden = true
     }
-
-    
-
-    //
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        tabBarController?.tabBar.isHidden = false
-//
-//    }
 }

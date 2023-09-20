@@ -18,11 +18,7 @@ class ForgotPasswordViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-  
     }
-    
-   
     
     @IBAction func resetPassword(_ sender: Any) {
         Auth.auth().sendPasswordReset(withEmail: email.text ?? "" ) { (error) in

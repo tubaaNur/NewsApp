@@ -26,14 +26,10 @@ class FavouritesViewController: UIViewController {
     var newsRepository = NewsRepository()
     
     override func viewDidLoad() {
-        
-       
         super.viewDidLoad()
         
         favouritesCollectionView.delegate = self
         favouritesCollectionView.dataSource = self
-        
-       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -45,13 +41,10 @@ class FavouritesViewController: UIViewController {
             self.newsList = list
             self.favouritesCollectionView.reloadData()
         })
-        
         activityIndicator.stopAnimating()
         loadingView.isHidden = true
-        
         favouritesTitle?.title = defaultLocalizer.stringForKey(key: "favouritesLabel")
     }
-       
 }
 
 extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -67,7 +60,6 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
                 let data = try? Data(contentsOf: url)
                 cell.cellImage.image = UIImage(data: data ?? Data())
              }
-            
             cell.cellImage.layer.cornerRadius = 10
             cell.cellTitle.text = newsList[indexPath.row].title ?? "tubaaa"
             cell.cellDescription.text = newsList[indexPath.row].description ?? "başarım"
@@ -94,6 +86,4 @@ extension FavouritesViewController: UICollectionViewDelegate, UICollectionViewDa
             }
         }
     }
-    
-
 }

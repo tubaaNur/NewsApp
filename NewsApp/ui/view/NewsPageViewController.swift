@@ -35,7 +35,6 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
     var randomItem:News? = nil
 
     override func viewDidLoad() {
-        
         super.viewDidLoad()
         
         self.tabBarController?.tabBar.isHidden = false
@@ -52,7 +51,6 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
             activityIndicator.stopAnimating()
             loadingView.isHidden = true
             newsList = response?.articles
-                 
             print("popular header \(popularHeader.text)")
             randomItem = newsList?.randomElement()
            if let url = URL(string: randomItem?.urlToImage ?? "https://resize.indiatvnews.com/en/resize/newbucket/730_-/2023/06/breaking-news-template-4-1687492027-1688087501.jpg"){
@@ -68,8 +66,6 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         popularHeader.text = defaultLocalizer.stringForKey(key: "popularNews")
-        
-        
         newsTitle.title = defaultLocalizer.stringForKey(key: "newsTitle")
     }
     
