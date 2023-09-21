@@ -1,13 +1,55 @@
-# News App
+<img src="https://github.com/tubaaNur/NewsApp/blob/main/NewsApp/Assets.xcassets/AppIcon.appiconset/New%20Project.jpg" width="10%"/>
+
+# News App 
 
 ## Description
 
 This is a news application that will keep you updated and connected to the globe. This app was created with Swift and Storyboard with the goal of providing a seamless and personalized news reading experience. It has features like authentication, news retrieval in multiple languages, local data storage, adjustable themes, language preferences, and more.
 
 ## Demo
-https://github.com/tubaaNur/NewsApp/assets/88987132/ba20c906-b810-4cd8-9c11-a7bce1c0c40b
 
-https://github.com/tubaaNur/NewsApp/assets/88987132/b38306d1-214f-471d-9146-4751e58081b4
+Onboarding:
+
+
+
+
+
+https://github.com/tubaaNur/NewsApp/assets/88987132/66e37441-92c6-415d-a042-7c65edc93761
+
+
+
+
+Detail and Favourites:
+
+
+
+
+
+
+
+
+https://github.com/tubaaNur/NewsApp/assets/88987132/7a651b51-1cb1-4f58-a7a3-03871e4bbc53
+
+
+Profile: 
+
+
+
+
+
+https://github.com/tubaaNur/NewsApp/assets/88987132/e0eab662-43a6-4f8d-8f4c-92d5c63da464
+
+
+
+
+<br/><br/>
+
+<p align="center">  
+<img src="https://github.com/tubaaNur/NewsApp/blob/main/NewsApp/Assets.xcassets/loginscreenshot2%201.imageset/login_1.png" width="32%"/>  
+<img src="https://github.com/tubaaNur/NewsApp/blob/main/NewsApp/Assets.xcassets/LoginScreenshot.imageset/login_2.png" width="32%"/>  
+<img src="https://github.com/tubaaNur/NewsApp/blob/main/NewsApp/Assets.xcassets/loginscreenshot2%202.imageset/login_3.png" width="32%"/>  
+</p>  
+
 
 ## Features
 
@@ -42,13 +84,13 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 Your feedback and contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request. If you'd like to contribute, please follow these steps:
 
 1.  Fork the repository.
-   
+    
 2.  Create a new branch for your feature or bug fix: `git checkout -b feature/new-feature` or `git checkout -b bugfix/fix-bug`.
-   
+    
 3.  Implement your changes and test thoroughly.
-   
+    
 4.  Commit your changes with descriptive commit messages.
-   
+    
 5.  Push your branch to your forked repository.
-   
+    
 6.  Create a pull request to the main repository's `main` branch.
