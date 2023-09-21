@@ -8,19 +8,10 @@
 import UIKit
 
 
-
-protocol PickerViewControllerDelegate {
-    func didSelectContactType(_ type: String)
-}
-
-extension PickerViewControllerDelegate {
-    func didSelectContactType(_ type: String) {}
-}
-
 class PickerViewController: UIViewController {
     let defaultLocalizer = LocalizeUtils.defaultLocalizer
     var list: [String] = ["en", "tr"]
-
+    private var selectedLanguage: String?
     @IBOutlet weak var languagePicker: UILabel!
     @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var confirmButton: UIButton!
@@ -32,12 +23,19 @@ class PickerViewController: UIViewController {
     }
 
     @IBAction func onClickConfirmButton(_ sender: Any) {
-        delegate?.didSelectContactType(selectedLanguage ?? "")
+        var storyboardName = "NewsStoryboard"
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        let intialVC = storyboard.instantiateInitialViewController()
+        if let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate {
+            sceneDelegate.window?.rootViewController = intialVC
+        }
+        UserDefaults.standard.set(selectedLanguage, forKey: "SelectedLanguage")
+        UserDefaults.standard.synchronize()
+        defaultLocalizer.setSelectedLanguage(lang: selectedLanguage ?? "en")
         dismiss(animated: true)
     }
     
-    private var selectedLanguage: String?
-    var delegate: PickerViewControllerDelegate?
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()

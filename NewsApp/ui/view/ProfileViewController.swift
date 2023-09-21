@@ -10,7 +10,7 @@ import FirebaseAuth
 
 class ProfileViewController: UIViewController {
     
-    
+    let defaultLocalizer = LocalizeUtils.defaultLocalizer
     @IBOutlet weak var profileTitle: UINavigationItem!
     @IBOutlet weak var profileViewLanguage: UIView!
     @IBOutlet weak var profileview: UIView!
@@ -23,17 +23,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet var rootView: UIView!
     @IBOutlet weak var profileImage: UIImageView!
     
-    let defaultLocalizer = LocalizeUtils.defaultLocalizer
-    
-    private var selectedLanguage: String? {
-        didSet {
-            UserDefaults.standard.set(selectedLanguage, forKey: "SelectedLanguage")
-            UserDefaults.standard.synchronize()
-            defaultLocalizer.setSelectedLanguage(lang: selectedLanguage ?? "en")
-            
-        }
-    }
-
     var window: UIWindow?
     weak var themeDelegate: ThemeChangeDelegate?
     
@@ -88,7 +77,6 @@ class ProfileViewController: UIViewController {
         let storyboard = UIStoryboard(name: "NewsStoryboard", bundle: nil)
         
         if let vc = storyboard.instantiateViewController(identifier: "PickerViewController") as? PickerViewController {
-            vc.delegate = self
             vc.modalPresentationStyle = .overCurrentContext
             self.present(vc, animated: true)
         }
@@ -108,14 +96,6 @@ class ProfileViewController: UIViewController {
         catch { print("User already logged out") }
     }
 }
-
-extension ProfileViewController: PickerViewControllerDelegate {
-    func didSelectContactType(_ type: String ) {
-        selectedLanguage = type
-    }
-}
-
-
 
 class LocalizeUtils: NSObject {
 

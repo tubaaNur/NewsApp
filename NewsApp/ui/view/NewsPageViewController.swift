@@ -100,11 +100,11 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
     }
     
     func getNews() async -> NewsResponse? {
-        var a = UserDefaults.standard.string(forKey: "SelectedLanguage") ?? "us"
-        if(a == "en"){
-            a = "us"
+        var language = UserDefaults.standard.string(forKey: "SelectedLanguage") ?? "us"
+        if(language == "en"){
+            language = "us"
         }
-        let response = await   AF.request("https://newsapi.org/v2/top-headlines?country=\(a)&apiKey=f56bbdad8be940a88c037582ed7c5ff8", method:.get)
+        let response = await   AF.request("https://newsapi.org/v2/top-headlines?country=\(language)&apiKey=f56bbdad8be940a88c037582ed7c5ff8", method:.get)
             .validate()
         .serializingDecodable(NewsResponse.self)
         .response
