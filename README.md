@@ -5,7 +5,9 @@
 This is a news application that will keep you updated and connected to the globe. This app was created with Swift and Storyboard with the goal of providing a seamless and personalized news reading experience. It has features like authentication, news retrieval in multiple languages, local data storage, adjustable themes, language preferences, and more.
 
 ## Demo
-Add video here
+https://github.com/tubaaNur/NewsApp/assets/88987132/ba20c906-b810-4cd8-9c11-a7bce1c0c40b
+
+https://github.com/tubaaNur/NewsApp/assets/88987132/b38306d1-214f-471d-9146-4751e58081b4
 
 ## Features
 

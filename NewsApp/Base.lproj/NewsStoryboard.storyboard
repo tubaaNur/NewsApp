@@ -606,10 +606,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="392" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XV0-tX-YSW">
-                                        <rect key="frame" x="1" y="603" width="394" height="22"/>
+                                        <rect key="frame" x="1" y="571" width="394" height="54"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change Language" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Quc-kn-FqK">
-                                                <rect key="frame" x="119" y="14" width="158" height="20"/>
+                                                <rect key="frame" x="119" y="14" width="159" height="20"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -626,7 +626,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uEe-gI-Cyd" userLabel="Confirm">
-                                                <rect key="frame" x="310" y="7" width="86" height="34"/>
+                                                <rect key="frame" x="311" y="7" width="86" height="34"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="86" id="kda-Vy-kVZ"/>
                                                 </constraints>
@@ -643,9 +643,9 @@
                                             <constraint firstItem="uEe-gI-Cyd" firstAttribute="leading" secondItem="Quc-kn-FqK" secondAttribute="trailing" constant="33" id="Cj4-XC-jxP"/>
                                             <constraint firstItem="uEe-gI-Cyd" firstAttribute="centerY" secondItem="Quc-kn-FqK" secondAttribute="centerY" id="DAn-Bm-3Ax"/>
                                             <constraint firstItem="1ID-h7-wn3" firstAttribute="leading" secondItem="XV0-tX-YSW" secondAttribute="leading" id="JyM-mg-RGv"/>
-                                            <constraint firstAttribute="bottom" secondItem="1ID-h7-wn3" secondAttribute="bottom" constant="-19" id="N9e-78-pPA"/>
+                                            <constraint firstAttribute="bottom" secondItem="1ID-h7-wn3" secondAttribute="bottom" constant="13" id="N9e-78-pPA"/>
                                             <constraint firstItem="Quc-kn-FqK" firstAttribute="leading" secondItem="1ID-h7-wn3" secondAttribute="trailing" constant="42.329999999999998" id="PxX-Ul-WWT"/>
-                                            <constraint firstAttribute="trailing" secondItem="uEe-gI-Cyd" secondAttribute="trailing" constant="-1" id="dzd-Ja-Ito"/>
+                                            <constraint firstAttribute="trailing" secondItem="uEe-gI-Cyd" secondAttribute="trailing" constant="-2" id="dzd-Ja-Ito"/>
                                             <constraint firstItem="Quc-kn-FqK" firstAttribute="top" secondItem="XV0-tX-YSW" secondAttribute="top" constant="14" id="nts-8z-5Ej"/>
                                             <constraint firstItem="uEe-gI-Cyd" firstAttribute="baseline" secondItem="1ID-h7-wn3" secondAttribute="baseline" id="sO4-eh-3lI"/>
                                         </constraints>
