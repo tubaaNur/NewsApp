@@ -67,6 +67,24 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
     override func viewWillAppear(_ animated: Bool) {
         popularHeader.text = defaultLocalizer.stringForKey(key: "popularNews")
         newsTitle.title = defaultLocalizer.stringForKey(key: "newsTitle")
+        var response: NewsResponse? = nil
+        activityIndicator.startAnimating()
+        loadingView.isHidden = false
+        Task {
+            response = await getNews()
+            activityIndicator.stopAnimating()
+            loadingView.isHidden = true
+            newsList = response?.articles
+            print("popular header \(popularHeader.text)")
+            randomItem = newsList?.randomElement()
+           if let url = URL(string: randomItem?.urlToImage ?? "https://resize.indiatvnews.com/en/resize/newbucket/730_-/2023/06/breaking-news-template-4-1687492027-1688087501.jpg"){
+                let data = try? Data(contentsOf: url)
+               popularNewImage.image  = UIImage(data: data ?? Data())
+             }
+            popularNewTitle.text = randomItem?.title
+            popularNewDescription.text = randomItem?.description
+            self.newsCollectionView.reloadData()
+        }
     }
     
     // Populer haberi tıklanabilir yapmak için varlar
@@ -81,13 +99,15 @@ class NewsPageViewController: UIViewController,UISearchBarDelegate {
         performSegue(withIdentifier: "toNew", sender: randomItem)
     }
     
-    func  getNews() async -> NewsResponse? {
-        //f56bbdad8be940a88c037582ed7c5ff8
-        let response = await   AF.request("https://newsapi.org/v2/top-headlines?country=us&apiKey=f56bbdad8be940a88c037582ed7c5ff8", method:.get)
+    func getNews() async -> NewsResponse? {
+        var a = UserDefaults.standard.string(forKey: "SelectedLanguage") ?? "us"
+        if(a == "en"){
+            a = "us"
+        }
+        let response = await   AF.request("https://newsapi.org/v2/top-headlines?country=\(a)&apiKey=f56bbdad8be940a88c037582ed7c5ff8", method:.get)
             .validate()
         .serializingDecodable(NewsResponse.self)
         .response
-        
         return response.value
     }
     

@@ -10,6 +10,11 @@ import FirebaseAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate,ThemeChangeDelegate {
     
+    
+    let defaultLocalizer = LocalizeUtils.defaultLocalizer
+    var window: UIWindow?
+    var theme: String = "Light"
+    
     func didChangeTheme(theme: String) {
         if (theme == "Dark") {
             window?.overrideUserInterfaceStyle = .light
@@ -21,10 +26,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate,ThemeChangeDelegate {
           }
     }
     
-    var window: UIWindow?
-    var theme: String = "Light"
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        defaultLocalizer.setSelectedLanguage(lang: UserDefaults.standard.string(forKey: "SelectedLanguage") ?? "en")
         var darkModeSelected = UserDefaults.standard.bool(forKey: "isDarkModeSelected")
         if(darkModeSelected == true){
             window?.overrideUserInterfaceStyle = .dark

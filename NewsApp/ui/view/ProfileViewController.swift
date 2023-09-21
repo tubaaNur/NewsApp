@@ -27,7 +27,6 @@ class ProfileViewController: UIViewController {
     
     private var selectedLanguage: String? {
         didSet {
-            print("selectedLanguage \(selectedLanguage)")
             UserDefaults.standard.set(selectedLanguage, forKey: "SelectedLanguage")
             UserDefaults.standard.synchronize()
             defaultLocalizer.setSelectedLanguage(lang: selectedLanguage ?? "en")
