@@ -21,7 +21,6 @@ class LoginViewController: UIViewController{
     @IBOutlet weak var loginButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func loginButtonClick(_ sender: Any) {
@@ -46,7 +45,7 @@ class LoginViewController: UIViewController{
                 }
             }
         }
-            catch { print("User already logged out") }
+             catch { print("User already logged out") }
         }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,8 +60,7 @@ class LoginViewController: UIViewController{
         passwordTextField.placeholder = defaultLocalizer.stringForKey(key: "passwordText")
         let localizedRegister = defaultLocalizer.stringForKey(key:  "registerButton")
         registerButton.setTitle(localizedRegister, for: .normal)
-    }
-      
         
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
     }
-
+}
